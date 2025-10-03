@@ -31,7 +31,7 @@ export default function NewsPage() {
       id: "a1",
       title: "Aftermovie : soirée d'entreprise à Bordeaux",
       excerpt:
-        "Retour en images sur une animation close-up et mentalisme lors d'une soirée corporate (200 invités).",
+        "<p>Retour en images sur une animation close-up et mentalisme lors d'une soirée corporate (200 invités).</p>",
       date: "2025-05-12",
       read: 3,
       category: "Événements",
@@ -174,7 +174,7 @@ export default function NewsPage() {
             </div>
             <p className="mt-3 text-gray-700">{featured.excerpt}</p>
             <div className="mt-6 flex gap-3">
-              <Button>Lire l'article</Button>
+              <Button>Lire l&rsquo;article</Button>
               <Button variant="outline">Voir toutes les actus</Button>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function NewsPage() {
                 </p>
                 <div className="mt-3 flex gap-2">
                   <Input placeholder="Votre email" />
-                  <Button>S'inscrire</Button>
+                  <Button>S&rsquo;inscrire</Button>
                 </div>
               </CardContent>
             </Card>

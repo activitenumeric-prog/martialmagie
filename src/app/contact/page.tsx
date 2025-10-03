@@ -5,6 +5,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer"; // ← Ajout
+import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -49,7 +50,7 @@ export default function ContactPage() {
       {/* Formulaire + Sidebar */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          {/* Blocs d'info (ex-sidebar) remontés au-dessus du formulaire */}
+          {/* Blocs info (ex-sidebar) remontés au-dessus du formulaire */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card className="rounded-2xl shadow-sm">
               <CardContent className="p-6">
@@ -173,7 +174,7 @@ export default function ContactPage() {
                     <label className="flex items-start gap-2 text-sm">
                       <input id="rgpd" type="checkbox" className="mt-1 h-4 w-4 rounded border-gray-300" />
                       <span>
-                        En soumettant ce formulaire j’accepte que les données saisies soient exploitées dans le cadre de la demande de devis et de la relation commerciale qui peut en découler.
+                        En soumettant ce formulaire j&rsquo;accepte que les données saisies soient exploitées dans le cadre de la demande de devis et de la relation commerciale qui peut en découler.
                       </span>
                     </label>
                     <p>
@@ -195,16 +196,18 @@ export default function ContactPage() {
             <div>
               <div className="rounded-2xl overflow-hidden shadow-sm">
                 <div className="aspect-[3/4] bg-gray-100">
-                  <img
-                    src="https://www.martialmagie.com/wp-content/uploads/2016/04/martial-magicien-photo-accueil.png"
+                  <Image
+                    src="/images/martial-magicien-photo-accueil.png"
                     alt="Martial Magie"
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    width={346}
+                    height={462}
                   />
                 </div>
               </div>
               <p className="mt-3 pt-12 text-[2rem] leading-tight text-gray-700" style={{ fontFamily: '"Trebuchet MS", script' }}>
-                Contactez-moi à l'aide de ce formulaire ou par téléphone au<br />
+                Contactez-moi à l&rsquo;aide de ce formulaire ou par téléphone au<br />
                 <a href="tel:+33607709219" className="font-semibold text-red-600 hover:text-red-700" style={{ fontFamily: '"Trebuchet MS", script', fontSize: '2rem' }}>+33 (0)6 07 70 92 19</a>
               </p>
             </div>
