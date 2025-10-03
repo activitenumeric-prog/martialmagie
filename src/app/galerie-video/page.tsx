@@ -2,7 +2,7 @@
 "use client";
 
 import Header from "@/components/Header";
-import Footer from "@/components/Footer"; // ← Ajout
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,11 +11,20 @@ import { motion } from "framer-motion";
 import { Play, Search, Clock } from "lucide-react";
 import * as React from "react";
 
+// Type pour video (fix 'any')
+type Video = {
+  id: string;
+  title: string;
+  category: string;
+  duration: string;
+  src: string;
+  color: string;
+};
+
 export default function VideoGalleryPage() {
   const categories = ["Tout","Close-Up","Mariages","Entreprises","Mentalisme","Digital & Marketing","Séminaires"];
-  const allVideos = [
-    { id: "v1", title: "Teaser — Magie & Mentalisme", category: "Entreprises", duration: "01:12", src: "https://www.youtube.com/embed/VIDEO_ID_1", color: "bg-gray-300" },
-    { id: "v2", title: "Close-Up au cocktail", category: "Close-Up", duration: "00:48", src: "https://www.youtube.com/embed/VIDEO_ID_2", color: "bg-gray-200" },
+  const allVideos: Video[] = [
+    { id: "v1", title: "Teaser — Magie & Mentalisme", category: "Entreprises", duration: "01:12", src: "https://www.youtube.com/embed/VIDEO_ID_1", color: "bg-gray-300" },{ id: "v2", title: "Close-Up au cocktail", category: "Close-Up", duration: "00:48", src: "https://www.youtube.com/embed/VIDEO_ID_2", color: "bg-gray-200" },
     { id: "v3", title: "Mariage — Vin d’honneur", category: "Mariages", duration: "01:05", src: "https://www.youtube.com/embed/VIDEO_ID_3", color: "bg-gray-200" },
     { id: "v4", title: "Séminaire — Ice-breaker", category: "Séminaires", duration: "00:54", src: "https://www.youtube.com/embed/VIDEO_ID_4", color: "bg-gray-300" },
     { id: "v5", title: "Mentalisme sur scène", category: "Mentalisme", duration: "01:22", src: "https://www.youtube.com/embed/VIDEO_ID_5", color: "bg-gray-200" },
@@ -28,8 +37,8 @@ export default function VideoGalleryPage() {
   const [query, setQuery] = React.useState("");
   const [category, setCategory] = React.useState("Tout");
   const [open, setOpen] = React.useState(false);
-  const [active, setActive] = React.useState<any>(null);
-
+  const [active, setActive] = React.useState<Video | null>(null); // Fix: Type Video | null
+  
   const filtered = allVideos.filter(v =>
     (category === "Tout" || v.category === category) &&
     v.title.toLowerCase().includes(query.toLowerCase())

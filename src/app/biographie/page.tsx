@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
-import Image from "next/image"; // ← Import pour l'image optimisée
+import Image from "next/image";
 
 export default function BioPage() {
   return (
@@ -22,11 +22,11 @@ export default function BioPage() {
             Biographie
           </motion.h1>
           <p className="mt-3 max-w-2xl text-gray-200">
-            Parcours, influences et engagements de scène : l’histoire derrière la magie et le mentalisme.
+            Parcours, influences et engagements de sc&egrave;ne : l&rsquo;histoires derri&egrave;re la magie et le mentalisme.
           </p>
           <div className="mt-6 flex gap-2">
-            <Button asChild><a href="#histoire">Découvrir l’histoire</a></Button>
-            <Button variant="outline" className="bg-white text-gray-900">Voir les références</Button>
+            <Button asChild><a href="#histoire">D&eacute;couvrir l&rsquo;histoires</a></Button>
+            <Button variant="outline" className="bg-white text-gray-900">Voir les r&eacute;f&eacute;rences</Button>
           </div>
         </div>
       </section>
@@ -34,52 +34,49 @@ export default function BioPage() {
       {/* Portrait + pitch */}
       <section id="histoire" className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-          {/* Remplacement du placeholder par l'image martial.png */}
+          {/* Image martial.png */}
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
             <Image
               src="/images/martial.png"
-              alt="Portrait de Théotim Martins, magicien et mentaliste"
+              alt="Portrait de Th&eacute;otim Martins, magicien et mentaliste"
               fill
               className="object-cover"
-              priority // Optimisation pour l'image principale
+              priority
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">L’artiste</h2>
+            <h2 className="text-3xl font-bold">L&rsquo;artiste</h2>
             <p className="mt-3 text-gray-700">
-              Martial est magicien mentaliste à Paris depuis 30 ans. Il vous invite en tant que magicien mentaliste à participer à des expériences au cours desquelles il vous dévoilera des informations personnelles. Ainsi, vous serez subjugués par ses performances et son humour.
-              Martial fera un court voyage dans le passé d’un spectateur. Ce dernier choisira librement dans son esprit le prénom d’un camarade de classe, l’année de sa fréquentation et une activité qu’ils partageaient ensemble. Ensuite, Martial sera en mesure de lui révéler ses pensées. Vous assisterez à un show bluffant, sensationnel et efficace avec un mentaliste qui se déplace partout en France, en Suisse et en Belgique pour agrémenter des événements d’entreprises.
+              Magicien &amp; mentaliste professionnel bas&eacute; &agrave; Bordeaux, Th&eacute;otim d&eacute;veloppe un style moderne m&ecirc;lant magie visuelle, lecture de pens&eacute;e et humour. 
+              Ses pr&eacute;stations sont con&ccedil;ues pour cr&eacute;er de v&eacute;ritables moments de partage, en close-up comme sur sc&egrave;ne.
             </p>
             <p className="mt-3 text-gray-700">
-              Martial vous propose ses services pour marquer vos soirées privées, mariages, anniversaires à domicile…
-            </p>
-            <p className="mt-3 text-gray-700">
-              Par ailleurs, ses prestations sont envisageables soit en close-up lors d’un cocktail, d’un repas à table ou soit sur scène.
+              La biographie met en avant l&rsquo;&eacute;volution artistique, les premi&egrave;res repr&eacute;sentations, l&rsquo;exigence technique et l&rsquo;importance donn&eacute;e &agrave; l&rsquo;interaction avec le public.
             </p>
             <blockquote className="mt-4 italic text-gray-600 border-l-4 border-gray-200 pl-4">
-              « Faire vivre des émotions fortes, sans jamais prendre le public de haut : la magie comme langage universel. »
+              &laquo; Faire vivre des &eacute;motions fortes, sans jamais prendre le public de haut : la magie comme langage universel. &raquo;
             </blockquote>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <Card><CardContent className="p-4"><div className="text-xl font-bold">300+</div><div className="text-xs">Avis Google</div></CardContent></Card>
-              <Card><CardContent className="p-4"><div className="text-xl font-bold">FR / EN</div><div className="text-xs">Langues</div></CardContent></Card>
-              <Card><CardContent className="p-4"><div className="text-xl font-bold">Close-up</div><div className="text-xs">& Scène</div></CardContent></Card>
-              <Card><CardContent className="p-4"><div className="text-xl font-bold">France</div><div className="text-xs">& International</div></CardContent></Card>
+              <Card><CardContent className="p-4"><div className="text-xl font-bold">FR / EN / ES</div><div className="text-xs">Langues</div></CardContent></Card>
+              <Card><CardContent className="p-4"><div className="text-xl font-bold">Close-up</div><div className="text-xs">&amp; Sc&egrave;ne</div></CardContent></Card>
+              <Card><CardContent className="p-4"><div className="text-xl font-bold">France</div><div className="text-xs">&amp; International</div></CardContent></Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline / Étapes clés */}
+      {/* Timeline / &Eacute;tapes cl&eacute;s */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center">Étapes clés</h2>
+          <h2 className="text-3xl font-bold text-center">&Eacute;tapes cl&eacute;s</h2>
           <div className="mt-10 grid md:grid-cols-4 gap-6">
-            {["Débuts et apprentissage","Premières prestations publiques","Développement du style personnel","Ouverture aux événements pro"].map((t,i)=> (
+            {["D&eacute;buts et apprentissage","Premi&egrave;res pr&eacute;stations publiques","D&eacute;veloppement du style personnel","Ouverture aux &eacute;v&eacute;nements pro"].map((t,i)=> (
               <Card key={t} className="rounded-2xl shadow-sm">
                 <CardContent className="p-6">
-                  <div className="text-sm text-gray-500">20{10+i}–20{11+i}</div>
+                  <div className="text-sm text-gray-500">20{10+i}&ndash;20{11+i}</div>
                   <h3 className="font-semibold mt-1">{t}</h3>
-                  <p className="text-sm text-gray-700 mt-2">Texte descriptif court sur la période, les apprentissages et les scènes marquantes (placeholder).</p>
+                  <p className="text-sm text-gray-700 mt-2">Texte descriptif court sur la p&eacute;riode, les apprentissages et les sc&egrave;nes marquantes (placeholder).</p>
                 </CardContent>
               </Card>
             ))}
@@ -87,17 +84,17 @@ export default function BioPage() {
         </div>
       </section>
 
-      {/* Style & influences */}
+      {/* Style &amp; influences */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className="text-3xl font-bold">Style & influences</h2>
-            <p className="mt-3 text-gray-700">Magie visuelle, mentalisme participatif et humour bienveillant constituent la signature des prestations. Priorité au rythme, au naturel des interactions et au respect du public.</p>
+            <h2 className="text-3xl font-bold">Style &amp; influences</h2>
+            <p className="mt-3 text-gray-700">Magie visuelle, mentalisme participatif et humour bienveillant constituent la signature des pr&eacute;stations. Priorit&eacute; au rythme, au naturel des interactions et au respect du public.</p>
             <ul className="mt-4 space-y-2 text-gray-700">
-              <li>• Magie moderne & impact visuel immédiat</li>
-              <li>• Mentalisme interactif et surprenant</li>
-              <li>• Mise en scène fluide, adaptée à chaque lieu</li>
-              <li>• Expériences mémorables au service de l’événement</li>
+              <li>&bull; Magie moderne &amp; impact visuel imm&eacute;diat</li>
+              <li>&bull; Mentalisme interactif et surprenant</li>
+              <li>&bull; Mise en sc&egrave;ne fluide, adapt&eacute;e &agrave; chaque lieu</li>
+              <li>&bull; Exp&eacute;riences m&eacute;morables au service de l&rsquo;&eacute;v&eacute;nement</li>
             </ul>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -108,11 +105,11 @@ export default function BioPage() {
         </div>
       </section>
 
-      {/* Références & distinctions */}
+      {/* R&eacute;f&eacute;rences &amp; distinctions */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center">Références & distinctions</h2>
-          <p className="mt-2 text-center text-gray-700">Sélection d’entreprises, lieux et événements ayant accueilli les prestations (placeholders).</p>
+          <h2 className="text-2xl font-bold text-center">R&eacute;f&eacute;rences &amp; distinctions</h2>
+          <p className="mt-2 text-center text-gray-700">S&eacute;lection d&rsquo;entreprises, lieux et &eacute;v&eacute;nements ayant accueilli les pr&eacute;stations (placeholders).</p>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 opacity-80">
             {Array.from({length:12}).map((_,i)=> (
               <div key={i} className="h-14 bg-white rounded shadow-sm flex items-center justify-center text-xs">Logo</div>
@@ -124,19 +121,19 @@ export default function BioPage() {
       {/* FAQ courte */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6">Questions fréquentes</h2>
+          <h2 className="text-3xl font-bold text-center mb-6">Questions fr&eacute;quentes</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="bio-1">
-              <AccordionTrigger>Quels formats privilégiez-vous ?</AccordionTrigger>
-              <AccordionContent>Close-up pour la proximité et la fluidité, mentalisme pour l’impact collectif — les deux peuvent se combiner selon la durée et le public.</AccordionContent>
+              <AccordionTrigger>Quels formats privil&eacute;giez-vous ?</AccordionTrigger>
+              <AccordionContent>Close-up pour la proximit&eacute; et la fluidit&eacute;, mentalisme pour l&rsquo;impact collectif &mdash; les deux peuvent se combiner selon la dur&eacute;e et le public.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="bio-2">
-              <AccordionTrigger>Intervenez-vous à l’international ?</AccordionTrigger>
-              <AccordionContent>Oui — prestations en français, anglais et espagnol, avec expérience d’événements en France et à l’étranger.</AccordionContent>
+              <AccordionTrigger>Intervenez-vous &agrave; l&rsquo;international ?</AccordionTrigger>
+              <AccordionContent>Oui &mdash; pr&eacute;stations en fran&ccedil;ais, anglais et espagnol, avec exp&eacute;rience d&rsquo;&eacute;v&eacute;nements en France et &agrave; l&rsquo;&eacute;tranger.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="bio-3">
-              <AccordionTrigger>Peut-on adapter la prestation à notre identité ?</AccordionTrigger>
-              <AccordionContent>Des effets et messages peuvent être personnalisés : intégration de thématiques, logo, ou créations dédiées pour des lancements.</AccordionContent>
+              <AccordionTrigger>Peut-on adapter la pr&eacute;station &agrave; notre identit&eacute; ?</AccordionTrigger>
+              <AccordionContent>Des effets et messages peuvent &ecirc;tre personnalis&eacute;s : int&eacute;gration de th&eacute;matiques, logo, ou cr&eacute;ations d&eacute;di&eacute;es pour des lancements.</AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
@@ -145,8 +142,8 @@ export default function BioPage() {
       {/* CTA final */}
       <section className="py-16 bg-gray-950 text-gray-100 text-center" id="contact">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Envie d’en savoir plus ?</h2>
-          <p className="mt-2 opacity-90">Discutons de votre événement et des formats possibles. Réponse rapide.</p>
+          <h2 className="text-3xl md:text-4xl font-bold">Envie d&rsquo;en savoir plus ?</h2>
+          <p className="mt-2 opacity-90">Discutons de votre &eacute;v&eacute;nement et des formats possibles. R&eacute;ponse rapide.</p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <Button size="lg" className="bg-white text-gray-900">Demander un devis</Button>
             <Button size="lg" variant="outline" className="border-gray-300">Me contacter</Button>

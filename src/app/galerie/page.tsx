@@ -2,9 +2,9 @@
 "use client";
 
 import Header from "@/components/Header";
-import Footer from "@/components/Footer"; // ← Ajout
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+// Supprimé : Card, CardContent (inutilisés)
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { motion } from "framer-motion";

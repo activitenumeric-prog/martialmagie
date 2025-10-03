@@ -1,4 +1,4 @@
-// src/app/page.tsx
+// app/page.tsx
 "use client";
 
 import Link from "next/link";
@@ -23,13 +23,13 @@ export default function HomePage() {
             transition={{ duration: 0.4 }}
             className="text-4xl md:text-6xl font-extrabold tracking-tight"
           >
-            Magicien de Paris & Mentaliste Professionnel
+            Magicien de Paris &amp; Mentaliste Professionnel
           </motion.h1>
           <p className="max-w-2xl mx-auto mt-4 text-base md:text-lg opacity-90">
-            Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 300 avis clients vérifiés.
+            Magie moderne, visuelle et interactive pour mariages, entreprises et &eacute;v&eacute;nements priv&eacute;s. + de 300 avis clients v&eacute;rif&eacute;s.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <Button size="lg" asChild><Link href="/galerie-video">Découvrir le teaser</Link></Button>
+            <Button size="lg" asChild><Link href="/galerie-video">D&eacute;couvrir le teaser</Link></Button>
             <Button variant="outline" size="lg" className="bg-white text-gray-900">Consulter les avis</Button>
           </div>
         </div>
@@ -40,8 +40,8 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
           <div><div className="text-2xl font-bold">300+</div> Avis Google</div>
           <div><div className="text-2xl font-bold">FR / EN / ES</div> Langues</div>
-          <div><div className="text-2xl font-bold">France & Intl.</div> Déplacements</div>
-          <div><div className="text-2xl font-bold">Close-up & Scène</div> Polyvalence</div>
+          <div><div className="text-2xl font-bold">France &amp; Intl.</div> D&eacute;placements</div>
+          <div><div className="text-2xl font-bold">Close-up &amp; Sc&egrave;ne</div> Polyvalence</div>
         </div>
       </section>
 
@@ -51,12 +51,12 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Prestations</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Magicien Close-Up", desc: "Animation mobile au plus près des invités, idéale cocktail & dîner." },
-              { title: "Magicien pour Mariage", desc: "Vin d’honneur, repas, ouverture de bal : émerveillement garanti." },
+              { title: "Magicien Close-Up", desc: "Animation mobile au plus pr&egrave;s des invit&eacute;s, id&eacute;ale cocktail &amp; d&icirc;ner." },
+              { title: "Magicien pour Mariage", desc: "Vin d&rsquo;honneur, repas, ouverture de bal : &eacute;merveillement garanti." },
               { title: "Anniversaires", desc: "Prestation sur-mesure pour enfants, ados ou adultes." },
-              { title: "Spectacle de Mentalisme", desc: "Démonstrations bluffantes, participation du public, humour." },
-              { title: "Magie digitale & marketing", desc: "Attraction de stand, product reveal, expériences connectées." },
-              { title: "Séminaires & congrès", desc: "Ice-breaker, interludes scéniques, moments fédérateurs." },
+              { title: "Spectacle de Mentalisme", desc: "D&eacute;monstrations bluffantes, participation du public, humour." },
+              { title: "Magie digitale &amp; marketing", desc: "Attraction de stand, product reveal, exp&eacute;riences connect&eacute;es." },
+              { title: "S&eacute;minaires &amp; congr&egrave;s", desc: "Ice-breaker, interludes sc&eacute;niques, moments f&eacute;d&eacute;rateurs." },
             ].map(({ title, desc }) => (
               <Card key={title} className="shadow-sm rounded-2xl overflow-hidden">
                 <div className="h-36 bg-gray-200" aria-hidden />
@@ -81,11 +81,11 @@ export default function HomePage() {
             <div>
               <h2 className="text-3xl font-bold mb-3">Vidéos</h2>
               <p className="text-gray-700 mb-4">
-                Découvrez le teaser et des extraits de prestations : close-up, mentalisme et scènes d’entreprise.
+                D&eacute;couvrez le teaser et des extraits de pr&eacute;stations : close-up, mentalisme et sc&egrave;nes d&rsquo;entreprise.
               </p>
               <div className="flex gap-3">
                 <Button asChild><Link href="/galerie-video">Voir le teaser</Link></Button>
-                <Button variant="outline" asChild><Link href="/galerie-video">+ de vidéos</Link></Button>
+                <Button variant="outline" asChild><Link href="/galerie-video">+ de vid&eacute;os</Link></Button>
               </div>
             </div>
             <div className="aspect-video rounded-2xl bg-gray-200" />
@@ -96,7 +96,7 @@ export default function HomePage() {
       {/* Références logos */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">Ils m'ont fait confiance</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">Ils m&rsquo;ont fait confiance</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 opacity-80">
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="h-14 bg-white rounded shadow-sm flex items-center justify-center text-xs">
@@ -112,15 +112,15 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div className="aspect-[4/5] rounded-2xl bg-gray-200" />
           <div>
-            <h2 className="text-3xl font-bold mb-3">Pourquoi choisir Théotim ?</h2>
+            <h2 className="text-3xl font-bold mb-3">Pourquoi choisir Th&eacute;otim ?</h2>
             <ul className="space-y-2 text-gray-700">
-              <li>• Style moderne : magie visuelle + mentalisme + humour.</li>
-              <li>• Forte interactivité et adaptation à tous les publics.</li>
-              <li>• 300+ avis Google et références variées.</li>
-              <li>• Prestation possible en FR / EN / ES, en France et à l’international.</li>
+              <li>&bull; Style moderne : magie visuelle + mentalisme + humour.</li>
+              <li>&bull; Forte interactivit&eacute; et adaptation &agrave; tous les publics.</li>
+              <li>&bull; 300+ avis Google et r&eacute;f&eacute;rences vari&eacute;es.</li>
+              <li>&bull; Prestation possible en FR / EN / ES, en France et &agrave; l&rsquo;international.</li>
             </ul>
             <div className="mt-5 flex gap-3">
-              <Button>Télécharger la plaquette</Button>
+              <Button>T&eacute;l&eacute;charger la plaquette</Button>
               <Button variant="outline" asChild><Link href="/biographie">Me contacter</Link></Button>
             </div>
           </div>
@@ -130,13 +130,13 @@ export default function HomePage() {
       {/* CTA finale */}
       <section id="contact" className="py-16 bg-gray-950 text-gray-100 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Parlons de votre événement</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Parlons de votre &eacute;v&eacute;nement</h2>
           <p className="mt-2 opacity-90">
-            Mariage, soirée d’entreprise, anniversaire, séminaire : je vous réponds sous 24h.
+            Mariage, soir&eacute;e d&rsquo;entreprise, anniversaire, s&eacute;minaire : je vous r&eacute;ponds sous 24h.
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <Button size="lg" className="bg-white text-gray-900">Demander un devis</Button>
-            <Button size="lg" variant="outline" className="border-gray-300">M’appeler</Button>
+            <Button size="lg" variant="outline" className="border-gray-300">M&rsquo;appeler</Button>
           </div>
         </div>
       </section>

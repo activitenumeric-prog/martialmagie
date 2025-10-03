@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
-import { cn } from "@/lib/cn";
+// Supprimé : import { cn } from "@/lib/cn"; (inutilisé)
 
 export default function Footer() {
   const navItems = [
