@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
         {/* Colonne 1: Marque & Description */}
         <div>
-          <div className="font-bold text-white mb-2">Théotim Martins</div>
+          <div className="font-bold text-white mb-2">Martial Magie</div>
           <p className="text-sm opacity-80">
             Magicien & Mentaliste Professionnel
             <br />
@@ -69,7 +69,7 @@ export default function Footer() {
 
         {/* Colonne 4: Réseaux */}
         <div>
-          <div className="font-semibold mb-2">Suivez-moi</div>
+          <div className="font-semibold mb-2">Suivez-moi sur</div>
           <div className="flex flex-col space-y-2 text-sm">
             <Link href="https://fr-fr.facebook.com/martial.bacquias" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
               <Facebook className="h-4 w-4" aria-hidden="true" /> Facebook
@@ -89,7 +89,7 @@ export default function Footer() {
 
       {/* Bottom: Copyright */}
       <div className="border-t border-white/10 text-center text-xs py-4 bg-gray-950">
-        © 2025 Théotim Martins – Magicien et Mentaliste Professionnel —{" "}
+        © 2025 Martial Magie – Magicien et Mentaliste Professionnel —{" "}
         <Link href="/mentions-legales" className="underline hover:text-white">
           Mentions légales
         </Link>

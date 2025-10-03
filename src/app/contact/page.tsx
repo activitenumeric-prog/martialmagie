@@ -9,7 +9,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Mail, MapPin, Calendar, Users, Euro, Send, Shield } from "lucide-react"
+import { Phone, Mail, MapPin, Calendar, Users, Send, Shield } from "lucide-react"
 
 export default function ContactPage() {
   return (
