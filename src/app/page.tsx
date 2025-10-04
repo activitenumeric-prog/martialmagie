@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 // Ajoute cette ligne après les imports existants
 import GoogleReviews from "@/components/GoogleReviews";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -18,28 +19,29 @@ export default function HomePage() {
       <Header showTopbar variant="light" />
 
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-gray-950 text-gray-100">
-        <div className="max-w-6xl mx-auto px-4 py-24 md:py-32 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="text-6xl md:text-6xl font-extrabold tracking-tight"
-          >
-            Martial Magie
-          </motion.h1>
-          <p className="text-4xl font-extrabold tracking-tight">
-            Magicien de Paris & Mentaliste Professionnel
-          </p>
-          <p className="max-w-2xl mx-auto mt-4 text-base md:text-lg opacity-90">
-            Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 400 avis clients vérifiés.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Button size="lg" asChild><Link href="/galerie-video">Découvrir le teaser</Link></Button>
-            <Button variant="outline" size="lg" className="bg-white text-gray-900">Consulter les avis</Button>
-          </div>
-        </div>
-      </section>
+<section className="relative isolate overflow-hidden bg-cover bg-center bg-no-repeat text-gray-100" style={{ backgroundImage: "url('/images/header-top.png')" }}>
+  <div className="absolute inset-0 bg-black/50 z-0"></div> {/* Overlay semi-transparent pour lisibilité */}
+  <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 md:py-32 text-center">
+    <motion.h1
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="text-6xl md:text-6xl font-extrabold tracking-tight text-white"
+    >
+      Martial Magie
+    </motion.h1>
+    <p className="text-4xl font-extrabold tracking-tight text-white">
+      Magicien de Paris & Mentaliste Professionnel
+    </p>
+    <p className="max-w-2xl mx-auto mt-4 text-base md:text-lg opacity-90 text-gray-200">
+      Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 400 avis clients vérifiés.
+    </p>
+    <div className="mt-8 flex items-center justify-center gap-3">
+      <Button size="lg" asChild><Link href="/galerie-video">Découvrir le teaser</Link></Button>
+      <Button variant="outline" size="lg" className="bg-white text-gray-900">Consulter les avis</Button>
+    </div>
+  </div>
+</section>
 
       {/* Bande preuves sociales */}
       <section className="border-y bg-white">
@@ -56,7 +58,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      
+{/* Portrait + pitch */}
+      <section id="histoire" className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+          {/* Image martial.png */}
+          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+            <Image
+              src="/images/martial-magicien-photo-accueil.png"
+              alt="Portrait de Martial Magie, magicien et mentaliste"
+              className="object-cover"
+              priority
+              width={500}
+              height={683}
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold">L&rsquo;artiste</h2>
+            <p className="mt-3 text-gray-700">
+              Martial est magicien mentaliste à Paris depuis 30 ans. Il vous invite en tant que magicien mentaliste à participer à des expériences au cours desquelles il vous dévoilera des informations personnelles. Ainsi, vous serez subjugués par ses performances et son humour.
+            </p>
+            <p className="mt-3 text-gray-700">
+              Martial fera un court voyage dans le passé d’un spectateur. Ce dernier choisira librement dans son esprit le prénom d’un camarade de classe, l’année de sa fréquentation et une activité qu’ils partageaient ensemble. Ensuite, Martial sera en mesure de lui révéler ses pensées. Vous assisterez à un show bluffant, sensationnel et efficace avec un mentaliste qui se déplace partout en France, en Suisse et en Belgique pour agrémenter des événements d’entreprises.
+            </p>
+            <blockquote className="mt-4 italic text-gray-600 border-l-4 border-gray-200 pl-4">
+              Martial vous propose ses services pour marquer vos soirées privées, mariages, anniversaires à domicile…
+            </blockquote>
+            
+          </div>
+        </div>
+      </section>      
             
 
       {/* Prestations */}
@@ -106,7 +136,7 @@ export default function HomePage() {
       {/* Spectacle de Mentalisme */}
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/digital.jpg')" }} aria-hidden />
-        <CardContent className="p-5 pb-5">
+        <CardContent className="pl-5 pb-5">
           <h3 className="text-lg font-semibold">Magie numérique</h3>
           <p className="text-sm text-gray-600 mt-1">Démonstrations bluffantes, participation du public, humour.</p>
           <div className="mt-4 flex items-center gap-2">
@@ -132,7 +162,7 @@ export default function HomePage() {
       {/* Séminaires & congrès */}
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/seminaire.jpg')" }} aria-hidden />
-        <CardContent className="p-5">
+        <CardContent className="pl-5 pb-5">
           <h3 className="text-lg font-semibold">Séminaires & congrès</h3>
           <p className="text-sm text-gray-600 mt-1">Ice-breaker, interludes scéniques, moments fédérateurs.</p>
           <div className="mt-4 flex items-center gap-2">
@@ -189,24 +219,33 @@ export default function HomePage() {
       </section>
 
       {/* Pourquoi me choisir */}
-      <section className="py-16 bg-white" id="bio">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-          <div className="aspect-[4/5] rounded-2xl bg-gray-200" />
-          <div>
-            <h2 className="text-3xl font-bold mb-3">Pourquoi choisir Martial ?</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Style moderne : magie visuelle + mentalisme + humour.</li>
-              <li>• Forte interactivité et adaptation à tous les publics.</li>
-              <li>• 300+ avis Google et références variées.</li>
-              <li>• Prestation possible en FR / EN, en France et à l’international.</li>
-            </ul>
-            <div className="mt-5 flex gap-3">
-              <Button>Télécharger la plaquette</Button>
-              <Button variant="outline" asChild><Link href="/biographie">Me contacter</Link></Button>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="py-16 bg-white" id="bio">
+  <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    {/* Remplacement du placeholder par l'image */}
+    <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+      <Image
+        src="/images/martialmagie.jpg"  // ← Remplace par ton image (ajoute en public/images si besoin)
+        alt="Portrait de Martial, magicien et mentaliste professionnel"
+        fill
+        className="object-cover"
+        priority  // ← Chargement rapide pour image hero
+      />
+    </div>
+    <div>
+      <h2 className="text-3xl font-bold mb-3">Pourquoi choisir Martial ?</h2>
+      <ul className="space-y-2 text-gray-700">
+        <li>• Style moderne : magie visuelle + mentalisme + humour.</li>
+        <li>• Forte interactivité et adaptation à tous les publics.</li>
+        <li>• 400+ avis Google et références variées.</li>
+        <li>• Prestation possible en FR / EN, en France et à l’international.</li>
+      </ul>
+      <div className="mt-5 flex gap-3">
+        <Button>Télécharger la plaquette</Button>
+        <Button variant="outline" asChild><Link href="/biographie">Me contacter</Link></Button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CTA finale */}
       <section id="contact" className="py-16 bg-gray-950 text-gray-100 text-center">
