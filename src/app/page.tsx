@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 // Ajoute cette ligne après les imports existants
 import GoogleReviews from "@/components/GoogleReviews";
-import type { Metadata } from "next";
+
 import Image from "next/image";
 import { Calendar, Clock} from "lucide-react";
 
@@ -262,7 +262,7 @@ export default function HomePage() {
             </p>
             <div className="mt-4">
               <Button size="sm" variant="outline" asChild>
-                <Link href={`/actualites/${post.id}`}>Lire l'article</Link>
+                <Link href={`/actualites/${post.id}`}>Lire l&lsquo;article</Link>
               </Button>
             </div>
           </CardContent>
