@@ -9,7 +9,7 @@ type GoogleReviewsProps = {
 };
 
 export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
-  const [reviews, setReviews] = useState(400); // Fallback au nombre actuel
+  const [reviews, setReviews] = useState(373); // Fallback au nombre actuel
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,9 +28,8 @@ export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
           libraries: ["places"],
         });
 
-        // Cast pour compatibilité types
-        const placesLib = await (loader as any).importLibrary("places");
-        const { Place } = placesLib;
+        // Fix: Type the importLibrary return as google.maps.PlacesLibrary
+        const placesLib = await loader.importLibrary("places") as google.maps.PlacesLibrary;
 
         const service = new google.maps.places.PlacesService(
           document.createElement("div")

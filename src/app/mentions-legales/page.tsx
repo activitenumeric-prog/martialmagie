@@ -6,8 +6,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { motion } from "framer-motion"
 import { FileText, Shield, Cookie, Globe, Link as LinkIcon, Lock, UserCheck, Scale } from "lucide-react"
 

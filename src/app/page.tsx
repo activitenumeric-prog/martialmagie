@@ -116,7 +116,7 @@ export default function HomePage() {
       {/* Références logos */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">Ils m'ont fait confiance</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">Ils m&lsquo;ont fait confiance</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 opacity-80">
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="h-14 bg-white rounded shadow-sm flex items-center justify-center text-xs">
