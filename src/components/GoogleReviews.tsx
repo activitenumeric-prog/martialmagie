@@ -28,8 +28,11 @@ export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
           libraries: ["places"],
         });
 
-        // Fix: Remove unused placesLib and use direct cast for service
-        const service = new (await (loader as any).importLibrary("places")).PlacesService(
+        // Fix: Disable ESLint for this line to allow any cast
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const placesLib = await (loader as any).importLibrary("places") as google.maps.PlacesLibrary;
+
+        const service = new google.maps.places.PlacesService(
           document.createElement("div")
         );
 
