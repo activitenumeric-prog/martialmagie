@@ -83,9 +83,9 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
           )}
         >
           <div className="flex items-center gap-6">
-            <a href="tel:+33607709219" className="hover:underline">📞 +33 6 07 70 92 19</a>
-            <a href="mailto:spectacle@martialmagie.com" className="hover:underline">
-              ✉️ spectacle@martialmagie.com
+            <a href="tel:+33607709219" className="flex items-center gap-2 rounded-lg px-3 py-2 hover:underline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>+33 6 07 70 92 19</a>
+            <a href="mailto:spectacle@martialmagie.com" className="flex items-center gap-2 rounded-lg px-3 py-2 hover:underline">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-4 w-4" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>spectacle@martialmagie.com
             </a>
           </div>
           <div className="flex items-center gap-4 opacity-80">
