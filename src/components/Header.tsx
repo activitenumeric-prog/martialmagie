@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// ✅ correct
 import { Facebook, Instagram, Youtube } from "lucide-react";
 
 import SiteLogo from "@/components/Sitelogo";
@@ -26,7 +25,9 @@ const navItems = [
   { label: "Vidéos", href: "/galerie-video" }, // <- MAJ chemin
   { label: "Galerie", href: "/galerie" },
   { label: "Actualités", href: "/actualites" },
-  { label: "Contact", href: "/contact" },
+  { label: "Boutique", href: "/boutique" },
+  { label: "It’s magic !", href: "/its-magic" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const prestationsChildren = [
@@ -53,23 +54,22 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
             <a href="tel:+33607709219" className="underline">📞 Appeler</a>
             <a href="mailto:spectacle@martialmagie.com" className="underline">✉️ Email</a>
             <div className="flex items-center gap-4 opacity-80">
-  <a href="https://fr-fr.facebook.com/martial.bacquias" target="_blank" rel="noopener noreferrer"
-     aria-label="Facebook" className="inline-flex items-center gap-1.5 hover:underline">
-    <Facebook className="h-4 w-4" aria-hidden="true" />
-    <span>Facebook</span>
-  </a>
-  <a href="https://www.instagram.com/martialmagicien/" target="_blank" rel="noopener noreferrer"
-     aria-label="Instagram" className="inline-flex items-center gap-1.5 hover:underline">
-    <Instagram className="h-4 w-4" aria-hidden="true" />
-    <span>Instagram</span>
-  </a>
-  <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer"
-     aria-label="YouTube" className="inline-flex items-center gap-1.5 hover:underline">
-    <Youtube className="h-4 w-4" aria-hidden="true" />
-    <span>YouTube</span>
-  </a>
-</div>
-
+              <a href="https://fr-fr.facebook.com/martial.bacquias" target="_blank" rel="noopener noreferrer"
+                 aria-label="Facebook" className="inline-flex items-center gap-1.5 hover:underline">
+                <Facebook className="h-4 w-4" aria-hidden="true" />
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/martialmagicien/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Instagram" className="inline-flex items-center gap-1.5 hover:underline">
+                <Instagram className="h-4 w-4" aria-hidden="true" />
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer"
+                 aria-label="YouTube" className="inline-flex items-center gap-1.5 hover:underline">
+                <Youtube className="h-4 w-4" aria-hidden="true" />
+                <span>YouTube</span>
+              </a>
+            </div>
           </div>
         </div>
       )}
@@ -83,9 +83,9 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
           )}
         >
           <div className="flex items-center gap-6">
-            <a href="tel:+33607709219" className="flex items-center gap-2 rounded-lg px-3 py-2 hover:underline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-phone h-4 w-4" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>+33 6 07 70 92 19</a>
-            <a href="mailto:spectacle@martialmagie.com" className="flex items-center gap-2 rounded-lg px-3 py-2 hover:underline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-mail h-4 w-4" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>spectacle@martialmagie.com
+            <a href="tel:+33607709219" className="hover:underline">📞 +33 6 07 70 92 19</a>
+            <a href="mailto:spectacle@martialmagie.com" className="hover:underline">
+              ✉️ spectacle@martialmagie.com
             </a>
           </div>
           <div className="flex items-center gap-4 opacity-80">
@@ -114,9 +114,9 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
               className="h-10 w-auto md:h-12"
             />
 
-            {/* Desktop nav */}
+            {/* Nav desktop */}
             <nav className="hidden md:flex items-center gap-6 text-[15px]">
-              {/* Accueil + Biographie */}
+              {/* Accueil & Biographie */}
               {navItems.slice(0, 2).map((item) => (
                 <Link
                   key={item.href}

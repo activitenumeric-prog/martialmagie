@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, Linkedin, Phone, Mail, MapPin, Calendar, Users, Send, Shield } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";  // ← Supprimé imports inutilisés (Phone, Mail, etc.)
 import Image from "next/image";
 
 export default function Footer() {
@@ -20,27 +20,39 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 border-t border-white/10">
       <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
         {/* Colonne 1: Marque & Description */}
-
         <div>
           <div className="font-bold text-white mb-2">Martial Magie</div>
           <p className="text-sm opacity-80">
             Magicien & Mentaliste Professionnel
             <br />
-             Paris — Déplacements France & Intl.
+            Paris — Déplacements France & Intl.
           </p>
           <ul>
-            <li className="flex mt-3 text-sm opacity-80"><a href="tel:+33607709219" className="flex items-center gap-2 rounded-lg px-3 hover:underline"><Phone className="h-4 w-4" />&nbsp;+33 6 07 70 92 19</a></li>
-            <li className="mt-2 text-sm opacity-80"><a href="mailto:spectacle@martialmagie.com" className="flex items-center gap-2 rounded-lg px-3 hover:underline"><Mail className="h-4 w-4" /> spectacle@martialmagie.com</a></li>
+            <li className="flex mt-3 text-sm opacity-80">
+              <a href="tel:+33607709219" className="flex items-center gap-2 rounded-lg px-3 hover:underline">
+                +33 6 07 70 92 19
+              </a>
+            </li>
+            <li className="mt-2 text-sm opacity-80">
+              <a href="mailto:spectacle@martialmagie.com" className="flex items-center gap-2 rounded-lg px-3 hover:underline">
+                spectacle@martialmagie.com
+              </a>
+            </li>
           </ul>
           <ul>
             <li className="flex mt-4 text-sm opacity-80">Contact & devis</li>
             <li className="flex mt-2 text-sm opacity-80">Mes références</li>
             <li className="flex mt-2 text-sm opacity-80">Mobilité géographique</li>
             <li className="flex mt-2 text-sm opacity-80">Plan du site</li>
-            <li className="flex mt-2 text-sm opacity-80">Mentions légales</li>
+            <li className="flex mt-2 text-sm opacity-80">
+              <Link href="/mentions-legales" className="hover:text-white">
+                Mentions légales
+              </Link>
+            </li>
           </ul>
         </div>
-        {/* Colonne 3: Magicien Paris et France */}      
+
+        {/* Colonne 3: Magicien Paris et France */}
         <div>
           <div className="font-semibold mb-2">Magicien Paris et France</div>
           <ul>
@@ -67,41 +79,41 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>  
-
+        </div>
 
         {/* Colonne 4: Réseaux */}
         <div>
           <div className="font-semibold mb-2">Suivez-moi sur</div>
-            <div className="flex flex-col space-y-2 text-sm">
-              <Link href="https://fr-fr.facebook.com/martial.bacquias" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
-                <Facebook className="h-4 w-4" aria-hidden="true" /> Facebook
-              </Link>
-              <Link href="https://www.instagram.com/martialmagicien/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
-                <Instagram className="h-4 w-4" aria-hidden="true" /> Instagram
-              </Link>
-              <Link href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
-                <Youtube className="h-4 w-4" aria-hidden="true" /> YouTube
-              </Link>
-            </div>
-            <div id="custom_html-5" className="widget_text widget_custom_html widget group">
-              <div className="widget_text widget-content">
-                <div className="textwidget custom-html-widget">
-                  <a href="https://www.martialmagie.com/" title="Magicien Paris, close-up, mentaliste, magicien mariage, magie numérique - Martial magie.">
-                    <Image
-                      src="/images/logo.png"
-                      alt=""
-                      className="object-cover"
-                      priority
-                      width={200}
-                      height={200}
-                    />
-                  </a>
-                </div>
+          <div className="flex flex-col space-y-2 text-sm">
+            <Link href="https://fr-fr.facebook.com/martial.bacquias" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
+              <Facebook className="h-4 w-4" aria-hidden="true" /> Facebook
+            </Link>
+            <Link href="https://www.instagram.com/martialmagicien/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
+              <Instagram className="h-4 w-4" aria-hidden="true" /> Instagram
+            </Link>
+            <Link href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
+              <Youtube className="h-4 w-4" aria-hidden="true" /> YouTube
+            </Link>
+          </div>
+          {/* Custom HTML Widget */}
+          <div id="custom_html-5" className="widget_text widget_custom_html widget group">
+            <div className="widget_text widget-content">
+              <div className="textwidget custom-html-widget">
+                <a href="https://www.martialmagie.com/" title="Magicien Paris, close-up, mentaliste, magicien mariage, magie numérique - Martial magie.">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Martial Magie Logo"
+                    className="object-cover"
+                    priority
+                    width={200}
+                    height={200}
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
       {/* Bottom: Copyright */}
       <div className="border-t border-white/10 text-center text-xs py-4 bg-gray-950">
