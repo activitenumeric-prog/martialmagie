@@ -11,7 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import GoogleReviews from "@/components/GoogleReviews";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock} from "lucide-react";
 
 export default function HomePage() {
   // Données des 3 dernières actualités (extrait de actualités/page.tsx, triées par date récente)
