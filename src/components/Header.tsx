@@ -10,6 +10,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 
 import SiteLogo from "@/components/Sitelogo";
 import { cn } from "@/lib/cn";
+import { Phone, Mail, MapPin, Calendar, Users, Send, Shield } from "lucide-react"
 
 type HeaderProps = {
   /** Apparence sur fond clair (default) ou sombre */
@@ -25,9 +26,7 @@ const navItems = [
   { label: "Vidéos", href: "/galerie-video" }, // <- MAJ chemin
   { label: "Galerie", href: "/galerie" },
   { label: "Actualités", href: "/actualites" },
-  { label: "Boutique", href: "/boutique" },
-  { label: "It’s magic !", href: "/its-magic" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const prestationsChildren = [
@@ -51,8 +50,8 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
       {showTopbar && (
         <div className="md:hidden bg-gray-900 text-gray-100">
           <div className="max-w-6xl mx-auto px-3 py-1.5 text-xs flex items-center justify-between gap-3 overflow-x-auto whitespace-nowrap">
-            <a href="tel:+33607709219" className="underline">📞 Appeler</a>
-            <a href="mailto:spectacle@martialmagie.com" className="underline">✉️ Email</a>
+            <a href="tel:+33607709219" className="underline"><Phone className="h-4 w-4" /> Appeler</a>
+            <a href="mailto:spectacle@martialmagie.com" className="underline"><Mail className="h-4 w-4" /> Email</a>
             <div className="flex items-center gap-4 opacity-80">
               <a href="https://fr-fr.facebook.com/martial.bacquias" target="_blank" rel="noopener noreferrer"
                  aria-label="Facebook" className="inline-flex items-center gap-1.5 hover:underline">
@@ -74,7 +73,7 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
         </div>
       )}
 
-      {/* Topbar — desktop */}
+            {/* Topbar — desktop */}
       {showTopbar && (
         <div
           className={cn(
@@ -83,15 +82,27 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
           )}
         >
           <div className="flex items-center gap-6">
-            <a href="tel:+33607709219" className="hover:underline">📞 +33 6 07 70 92 19</a>
-            <a href="mailto:spectacle@martialmagie.com" className="hover:underline">
-              ✉️ spectacle@martialmagie.com
+            <a href="tel:+33607709219" className="hover:underline flex items-center gap-2"><Phone className="h-4 w-4" /> +33 6 07 70 92 19</a>
+            <a href="mailto:spectacle@martialmagie.com" className="hover:underline flex items-center gap-2">
+              <Mail className="h-4 w-4" />&nbsp; spectacle@martialmagie.com
             </a>
           </div>
           <div className="flex items-center gap-4 opacity-80">
-            <a href="https://fr-fr.facebook.com/martial.bacquias" aria-label="Facebook" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/martialmagicien/" aria-label="Instagram" target="_blank">Instagram</a>
-            <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" aria-label="YouTube" target="_blank">YouTube</a>
+            <a href="https://fr-fr.facebook.com/martial.bacquias" title="Suivez-moi sur Facebook" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
+              <Facebook className="h-4 w-4" aria-hidden="true" />
+              <span className="sr-only">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/martialmagicien/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Instagram" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
+                <Instagram className="h-4 w-4" aria-hidden="true" />
+                <span className="sr-only">Instagram</span>
+              </a>
+            <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer"
+                 aria-label="YouTube" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
+                <Youtube className="h-4 w-4" aria-hidden="true" />
+                <span className="sr-only">YouTube</span>
+              </a>
           </div>
         </div>
       )}
@@ -121,7 +132,10 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={cn("hover:opacity-80", pathname === item.href && "font-semibold")}
+                  className={cn(
+                    "font-semibold hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-2",
+                    pathname === item.href && "text-[#ef010d] font-bold underline decoration-[#ef010d] decoration-2"
+                  )}
                 >
                   {item.label}
                 </Link>
@@ -132,8 +146,8 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                 <Link
                   href="/prestations"
                   className={cn(
-                    "flex items-center gap-1 hover:opacity-80",
-                    pathname?.startsWith("/prestations") && "font-semibold"
+                    "font-semibold flex items-center gap-1 hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-2",
+                    pathname?.startsWith("/prestations") && "text-[#ef010d] font-bold underline decoration-[#ef010d] decoration-2"
                   )}
                 >
                   Prestations <ChevronDown className="h-4 w-4 opacity-70" />
@@ -142,7 +156,7 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   <ul className="space-y-1 text-sm">
                     {prestationsChildren.map((s) => (
                       <li key={s.href}>
-                        <Link href={s.href} className="block px-2 py-1 rounded hover:bg-gray-50">
+                        <Link href={s.href} className="block px-2 py-1 rounded hover:bg-gray-50 hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-2">
                           {s.label}
                         </Link>
                       </li>
@@ -157,8 +171,8 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "hover:opacity-80",
-                    item.href !== "/#contact" && pathname === item.href && "font-semibold"
+                    "font-semibold hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-2",
+                    item.href !== "/#contact" && pathname === item.href && "text-[#ef010d] font-bold underline decoration-[#ef010d] decoration-2"
                   )}
                 >
                   {item.label}
@@ -257,7 +271,10 @@ function MobileLink({
     <Link
       href={href}
       onClick={onClick}
-      className={cn("block py-2", active ? "font-semibold" : "opacity-90 hover:opacity-100")}
+      className={cn(
+        "block py-2 hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-2",
+        active ? "text-[#ef010d] font-bold underline decoration-[#ef010d] decoration-2" : "opacity-90 hover:opacity-100"
+      )}
     >
       {children}
     </Link>
