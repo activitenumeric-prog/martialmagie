@@ -11,8 +11,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import GoogleReviews from "@/components/GoogleReviews";
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Calendar, Clock } from "lucide-react";
 
 export default function HomePage() {
+  // Données des 3 dernières actualités (extrait de actualités/page.tsx, triées par date récente)
+  const latestPosts = [
+    {
+      id: "a1",
+      title: "Magicien close-up pour AD Elec by Aubade à NANCY",
+      excerpt: "Animation d’un diner pour AD Elec by Aubade à NANCY avec 40 collaborateurs. Martial magicien digital et mentaliste a offert aux invités un show en close-up très interactif.",
+      date: "2025-10-01",
+      read: 3,
+      category: "Événements",
+      color: "bg-gray-200",
+    },
+    {
+      id: "a2",
+      title: "Spectacle Jeune Public pour SAISON 2025 à SARTROUVILLE",
+      excerpt: "La Malle Enchantée, Magicien, magicien pour enfants, spectacle de magie pour enfants, spectacle pour arbre de Noël.",
+      date: "2025-09-27",
+      read: 5,
+      category: "Conseils",
+      color: "bg-gray-300",
+    },
+    {
+      id: "a3",
+      title: "Magicien close-up pour DEMATHIEU BARD à METZ",
+      excerpt: "La Malle Enchantée, Magicien, magicien pour enfants, spectacle de magie pour enfants, spectacle pour arbre de Noël.",
+      date: "2025-09-27",
+      read: 4,
+      category: "Prestations",
+      color: "bg-gray-200",
+    },
+  ];
   return (
     <div className="font-sans text-gray-900 bg-white">
       {/* Header centralisé (topbar incluse) */}
@@ -37,8 +68,8 @@ export default function HomePage() {
       Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 400 avis clients vérifiés.
     </p>
     <div className="mt-8 flex items-center justify-center gap-3">
-      <Button size="lg" asChild><Link href="/galerie-video">Découvrir le teaser</Link></Button>
-      <Button variant="outline" size="lg" className="bg-white text-gray-900">Consulter les avis</Button>
+      <Button size="lg"><Link href="/galerie-video">Découvrir le teaser</Link></Button>
+      <Button size="lg">Consulter les avis</Button>
     </div>
   </div>
 </section>
@@ -47,7 +78,7 @@ export default function HomePage() {
       <section className="border-y bg-white">
         <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
           <div>
-            <div className="text-2xl font-bold"><GoogleReviews placeId="ChIJN1t_tDeu5kcRUlarG-kbA8M" /></div> 
+            <div className="text-2xl font-bold"><GoogleReviews placeId="ChIJN1t_tDeu5kcRUlarG-kbA8M" />+</div> 
             <div><Link href="https://www.google.com/maps/place/Martial+Magicien+digital+Mentaliste" target="_blank" rel="noopener noreferrer" className="text-xs underline hover:text-gray-600">
               Avis Google
             </Link></div>
@@ -101,8 +132,8 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Magicien Close-Up</h3>
           <p className="text-sm text-gray-600 mt-1">Animation mobile au plus près des invités, idéale cocktail & dîner.</p>
           <div className="mt-4 flex items-center gap-2">
-            <Button size="sm" asChild><Link href="/prestations#closeup">En savoir plus</Link></Button>
-            <Button size="sm" variant="outline">Devis close-up</Button>
+            <Button size="sm"><Link href="/prestations#closeup">En savoir plus</Link></Button>
+            <Button size="sm">Devis close-up</Button>
           </div>
         </CardContent>
       </Card>
@@ -114,8 +145,8 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Magicien pour Mariage</h3>
           <p className="text-sm text-gray-600 mt-1">Vin d’honneur, repas, ouverture de bal : émerveillement garanti.</p>
           <div className="mt-4 flex items-center gap-2">
-            <Button size="sm" asChild><Link href="/prestations#mariage">En savoir plus</Link></Button>
-            <Button size="sm" variant="outline">Devis mariage</Button>
+            <Button size="sm"><Link href="/prestations#mariage">En savoir plus</Link></Button>
+            <Button size="sm">Devis mariage</Button>
           </div>
         </CardContent>
       </Card>
@@ -127,8 +158,8 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Arbre de Noël</h3>
           <p className="text-sm text-gray-600 mt-1">Prestation sur-mesure pour enfants, ados ou adultes.</p>
           <div className="mt-4 flex items-center gap-2">
-            <Button size="sm" asChild><Link href="/prestations#anniversaire">En savoir plus</Link></Button>
-            <Button size="sm" variant="outline">Devis Arbre de Noël</Button>
+            <Button size="sm"><Link href="/prestations#anniversaire">En savoir plus</Link></Button>
+            <Button size="sm">Devis Arbre de Noël</Button>
           </div>
         </CardContent>
       </Card>
@@ -140,8 +171,8 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Magie numérique</h3>
           <p className="text-sm text-gray-600 mt-1">Démonstrations bluffantes, participation du public, humour.</p>
           <div className="mt-4 flex items-center gap-2">
-            <Button size="sm" asChild><Link href="/prestations#mentalisme">En savoir plus</Link></Button>
-            <Button size="sm" variant="outline">Devis mentalisme</Button>
+            <Button size="sm"><Link href="/prestations#mentalisme">En savoir plus</Link></Button>
+            <Button size="sm">Devis mentalisme</Button>
           </div>
         </CardContent>
       </Card>
@@ -153,8 +184,8 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Magie digitale & marketing</h3>
           <p className="text-sm text-gray-600 mt-1">Attraction de stand, product reveal, expériences connectées.</p>
           <div className="mt-4 flex items-center gap-2">
-            <Button size="sm" asChild><Link href="/prestations#digital">En savoir plus</Link></Button>
-            <Button size="sm" variant="outline">Devis digital</Button>
+            <Button size="sm"><Link href="/prestations#digital">En savoir plus</Link></Button>
+            <Button size="sm">Devis digital</Button>
           </div>
         </CardContent>
       </Card>
@@ -166,8 +197,8 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Séminaires & congrès</h3>
           <p className="text-sm text-gray-600 mt-1">Ice-breaker, interludes scéniques, moments fédérateurs.</p>
           <div className="mt-4 flex items-center gap-2">
-            <Button size="sm" asChild><Link href="/prestations#seminaires">En savoir plus</Link></Button>
-            <Button size="sm" variant="outline">Devis séminaire</Button>
+            <Button size="sm"><Link href="/prestations#seminaires">En savoir plus</Link></Button>
+            <Button size="sm">Devis séminaire</Button>
           </div>
         </CardContent>
       </Card>
@@ -185,8 +216,8 @@ export default function HomePage() {
                 Découvrez la magie digitale - Une animation moderne et originale proposée par Martial magicien pour marquer votre événement
               </p>
               <div className="flex gap-3">
-                <Button asChild><Link href="/galerie-video">Voir le teaser</Link></Button>
-                <Button variant="outline" asChild><Link href="/galerie-video">+ de vidéos</Link></Button>
+                <Button size="sm"><Link href="/galerie-video">Voir le teaser</Link></Button>
+                <Button size="sm" asChild><Link href="/galerie-video">+ de vidéos</Link></Button>
               </div>
             </div>
             <div className="aspect-video rounded-2xl bg-gray-200 overflow-hidden"> {/* Ajoute overflow-hidden pour clipper si besoin */}
@@ -203,6 +234,48 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+{/* Actualités */}
+<section className="py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-10">Actualités</h2>
+    <div className="grid md:grid-cols-3 gap-6">
+      {latestPosts.map((post) => (
+        <Card key={post.id} className="rounded-2xl overflow-hidden shadow-sm">
+          <div className={`aspect-[16/9] ${post.color}`} />
+          <CardContent className="p-5">
+            <div className="flex items-center gap-3 text-xs text-gray-600">
+              <span className="inline-block px-2 py-0.5 rounded bg-gray-900 text-white">
+                {post.category}
+              </span>
+              <span className="flex items-center gap-1">
+                <Calendar className="h-3.5 w-3.5" />{" "}
+                {new Date(post.date).toLocaleDateString("fr-FR")}
+              </span>
+              <span className="flex items-center gap-1">
+                <Clock className="h-3.5 w-3.5" /> {post.read} min
+              </span>
+            </div>
+            <h3 className="mt-2 text-lg font-semibold">{post.title}</h3>
+            <p className="mt-1 text-sm text-gray-700 line-clamp-2">
+              {post.excerpt}
+            </p>
+            <div className="mt-4">
+              <Button size="sm" variant="outline" asChild>
+                <Link href={`/actualites/${post.id}`}>Lire l'article</Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+    <div className="mt-8 text-center">
+      <Button variant="outline" asChild>
+        <Link href="/actualites">Voir toutes les actualités</Link>
+      </Button>
+    </div>
+  </div>
+</section>
 
       {/* Références logos */}
       <section className="py-12 bg-gray-50">
@@ -241,25 +314,27 @@ export default function HomePage() {
       </ul>
       <div className="mt-5 flex gap-3">
         <Button>Télécharger la plaquette</Button>
-        <Button variant="outline" asChild><Link href="/biographie">Me contacter</Link></Button>
+        <Button asChild><Link href="/contact">Me contacter</Link></Button>
       </div>
     </div>
   </div>
 </section>
 
       {/* CTA finale */}
-      <section id="contact" className="py-16 bg-gray-950 text-gray-100 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Parlons de votre événement</h2>
-          <p className="mt-2 opacity-90">
-            Mariage, soirée d’entreprise, anniversaire, séminaire : je vous réponds sous 24h.
-          </p>
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <Button size="lg" className="bg-white text-gray-900">Demander un devis</Button>
-            <Button size="lg" variant="outline" className="border-gray-300">M’appeler</Button>
-          </div>
-        </div>
-      </section>
+<section id="contact" className="relative py-16 bg-cover bg-center bg-no-repeat text-gray-100 text-center" style={{ backgroundImage: "url('/images/bleu-nuit.png')" }}>
+  {/* Overlay semi-transparent pour lisibilité du texte */}
+  <div className="absolute inset-0 bg-black/50 z-0"></div>
+  <div className="relative z-10 max-w-4xl mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold">Parlons de votre événement</h2>
+    <p className="mt-2 opacity-90">
+      Mariage, soirée d’entreprise, anniversaire, séminaire : je vous réponds sous 24h.
+    </p>
+    <div className="mt-6 flex items-center justify-center gap-3">
+      <Button size="sm">Demander un devis</Button>
+      <Button size="sm">M’appeler</Button>
+    </div>
+  </div>
+</section>
 
       {/* Footer centralisé */}
       <Footer />
