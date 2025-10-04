@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 // Ajoute cette ligne après les imports existants
 import GoogleReviews from "@/components/GoogleReviews";
+import type { Metadata } from "next";
 
 export default function HomePage() {
   return (
