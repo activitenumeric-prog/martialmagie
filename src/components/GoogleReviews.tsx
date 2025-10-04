@@ -9,14 +9,14 @@ type GoogleReviewsProps = {
 };
 
 export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
-  const [reviews, setReviews] = useState(373); // Fallback au nombre actuel
+  const [reviews, setReviews] = useState(400); // Fallback au nombre actuel
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const initGoogleMaps = async () => {
       const apiKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
       if (!apiKey) {
-        console.warn("Clé Google API manquante – fallback à 373 avis");
+        console.warn("Clé Google API manquante – fallback à 400 avis");
         setLoading(false);
         return;
       }
