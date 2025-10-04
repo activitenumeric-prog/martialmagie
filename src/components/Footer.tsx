@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Youtube } from "lucide-react";  // ← Supprimé imports inutilisés (Phone, Mail, etc.)
+import { Facebook, Instagram, Youtube, Phone, Mail } from "lucide-react";  // ← Supprimé imports inutilisés (Phone, Mail, etc.)
 import Image from "next/image";
 
 export default function Footer() {
@@ -30,12 +30,12 @@ export default function Footer() {
           <ul>
             <li className="flex mt-3 text-sm opacity-80">
               <a href="tel:+33607709219" className="flex items-center gap-2 rounded-lg px-3 hover:underline">
-                +33 6 07 70 92 19
+                <Phone className="h-4 w-4" /> +33 6 07 70 92 19
               </a>
             </li>
             <li className="mt-2 text-sm opacity-80">
               <a href="mailto:spectacle@martialmagie.com" className="flex items-center gap-2 rounded-lg px-3 hover:underline">
-                spectacle@martialmagie.com
+                <Mail className="h-4 w-4" /> spectacle@martialmagie.com
               </a>
             </li>
           </ul>
