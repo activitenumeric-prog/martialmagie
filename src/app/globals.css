@@ -126,6 +126,15 @@ header img {
   position: relative;
   height: auto;
 }
-  .md\:h-20 {
-      height: 100%;
+.md\:h-20 {
+    height: 100%;
+}
+@layer utilities {
+  @media (hover: hover) {
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-primary\/90:hover {
+        background-color: #ef010d;
+      }
+    }
   }
+}
