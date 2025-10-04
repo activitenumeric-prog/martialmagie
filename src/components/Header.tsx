@@ -26,8 +26,6 @@ const navItems = [
   { label: "Vidéos", href: "/galerie-video" }, // <- MAJ chemin
   { label: "Galerie", href: "/galerie" },
   { label: "Actualités", href: "/actualites" },
-  { label: "Boutique", href: "/boutique" },
-  { label: "It’s magic !", href: "/its-magic" },
   { label: "Contact", href: "/contact" },
 ];
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: "Martial Magicien Close-up Mentaliste Magie Numérique",
     template: "%s | Martial Magie", // Format : "Page Title | Site Name"
   },
-  description: "Magie moderne pour mariages, entreprises et événements. Bordeaux & international.",
+  description: "Magie moderne pour mariages, entreprises et événements.Disponible à Paris & en Île-de-France ainsi qu'à l'international.",
   keywords: ["magicien", "mentaliste", "mariage", "entreprise", "Paris", "événementiel", "close-up", "scène", "digital", "Magicien Paris" , "magicien close-up", "magicien mentaliste", "magicien mariage", "magie numérique"],
   authors: [{ name: "Martial Bacquias" }],
   creator: "Mikaël Folio - Integdevelop Studio",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://martialmagie.com",
     siteName: "Martial Magicien & Mentaliste",
     images: [{ url: "/images/og-image.jpg" }],
-    description: "Magie et mentalisme professionnel à Bordeaux et international.",
+    description: "Magie et mentalisme professionnel à Paris & en Île-de-France ainsi qu'à l'international.",
   },
   twitter: {
     card: "summary_large_image",

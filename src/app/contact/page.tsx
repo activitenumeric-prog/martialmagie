@@ -58,7 +58,7 @@ export default function ContactPage() {
                 <ul className="mt-3 space-y-2 text-sm">
                   <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +33 6 07 70 92 19</li>
                   <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> spectacle@martialmagie.com</li>
-                  <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Bordeaux — Déplacements France & Intl.</li>
+                  <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Paris — Déplacements France & Intl.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                 <h3 className="font-semibold">Infos utiles</h3>
                 <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 space-y-1">
                   <li>Réponse rapide et conseils sur-mesure</li>
-                  <li>Prestations FR / EN / ES</li>
+                  <li>Prestations FR / EN </li>
                   <li>Close-up, mentalisme & formats scéniques</li>
                 </ul>
               </CardContent>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   {/* Ville & Date de l’événement */}
                   <div>
                     <label className="text-sm font-medium">Ville</label>
-                    <Input placeholder="Bordeaux, Paris, Genève…" />
+                    <Input placeholder="Paris, Paris, Genève…" />
                   </div>
                   <div>
                     <label className="text-sm font-medium flex items-center gap-2"><Calendar className="h-4 w-4" /> Date de l’événement</label>

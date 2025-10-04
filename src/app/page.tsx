@@ -24,12 +24,15 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-4xl md:text-6xl font-extrabold tracking-tight"
+            className="text-6xl md:text-6xl font-extrabold tracking-tight"
           >
-            Magicien de Paris & Mentaliste Professionnel
+            Martial Magie
           </motion.h1>
+          <p className="text-4xl font-extrabold tracking-tight">
+            Magicien de Paris & Mentaliste Professionnel
+          </p>
           <p className="max-w-2xl mx-auto mt-4 text-base md:text-lg opacity-90">
-            Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 300 avis clients vérifiés.
+            Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 400 avis clients vérifiés.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
             <Button size="lg" asChild><Link href="/galerie-video">Découvrir le teaser</Link></Button>
@@ -57,33 +60,90 @@ export default function HomePage() {
             
 
       {/* Prestations */}
-      <section id="prestations" className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Prestations</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Magicien Close-Up", desc: "Animation mobile au plus près des invités, idéale cocktail & dîner." },
-              { title: "Magicien pour Mariage", desc: "Vin d’honneur, repas, ouverture de bal : émerveillement garanti." },
-              { title: "Anniversaires", desc: "Prestation sur-mesure pour enfants, ados ou adultes." },
-              { title: "Spectacle de Mentalisme", desc: "Démonstrations bluffantes, participation du public, humour." },
-              { title: "Magie digitale & marketing", desc: "Attraction de stand, product reveal, expériences connectées." },
-              { title: "Séminaires & congrès", desc: "Ice-breaker, interludes scéniques, moments fédérateurs." },
-            ].map(({ title, desc }) => (
-              <Card key={title} className="shadow-sm rounded-2xl overflow-hidden">
-                <div className="h-36 bg-gray-200" aria-hidden />
-                <CardContent className="p-5">
-                  <h3 className="text-lg font-semibold">{title}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{desc}</p>
-                  <div className="mt-4 flex items-center gap-2">
-                    <Button size="sm" asChild><Link href="/prestations">En savoir plus</Link></Button>
-                    <Button size="sm" variant="outline">Demander un devis</Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+<section id="prestations" className="py-16 md:py-20 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Prestations</h2>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Magicien Close-Up */}
+      <Card className="shadow-sm rounded-2xl overflow-hidden">
+        <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/close-up.jpg')" }} aria-hidden />
+        <CardContent className="pl-5">
+          <h3 className="text-lg font-semibold">Magicien Close-Up</h3>
+          <p className="text-sm text-gray-600 mt-1">Animation mobile au plus près des invités, idéale cocktail & dîner.</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Button size="sm" asChild><Link href="/prestations#closeup">En savoir plus</Link></Button>
+            <Button size="sm" variant="outline">Devis close-up</Button>
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
+
+      {/* Magicien pour Mariage */}
+      <Card className="shadow-sm rounded-2xl overflow-hidden">
+        <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/magie-mariage-710x473.jpg')" }} aria-hidden />
+        <CardContent className="pl-5 pb-5">
+          <h3 className="text-lg font-semibold">Magicien pour Mariage</h3>
+          <p className="text-sm text-gray-600 mt-1">Vin d’honneur, repas, ouverture de bal : émerveillement garanti.</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Button size="sm" asChild><Link href="/prestations#mariage">En savoir plus</Link></Button>
+            <Button size="sm" variant="outline">Devis mariage</Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Anniversaires */}
+      <Card className="shadow-sm rounded-2xl overflow-hidden">
+        <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/malle-enchantée-710x450.png')" }} aria-hidden />
+        <CardContent className="pl-5 pb-5">
+          <h3 className="text-lg font-semibold">Arbre de Noël</h3>
+          <p className="text-sm text-gray-600 mt-1">Prestation sur-mesure pour enfants, ados ou adultes.</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Button size="sm" asChild><Link href="/prestations#anniversaire">En savoir plus</Link></Button>
+            <Button size="sm" variant="outline">Devis Arbre de Noël</Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Spectacle de Mentalisme */}
+      <Card className="shadow-sm rounded-2xl overflow-hidden">
+        <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/digital.jpg')" }} aria-hidden />
+        <CardContent className="p-5 pb-5">
+          <h3 className="text-lg font-semibold">Magie numérique</h3>
+          <p className="text-sm text-gray-600 mt-1">Démonstrations bluffantes, participation du public, humour.</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Button size="sm" asChild><Link href="/prestations#mentalisme">En savoir plus</Link></Button>
+            <Button size="sm" variant="outline">Devis mentalisme</Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Magie digitale & marketing */}
+      <Card className="shadow-sm rounded-2xl overflow-hidden">
+        <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/mentalisme.jpg')" }} aria-hidden />
+        <CardContent className="pl-5 pb-5">
+          <h3 className="text-lg font-semibold">Magie digitale & marketing</h3>
+          <p className="text-sm text-gray-600 mt-1">Attraction de stand, product reveal, expériences connectées.</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Button size="sm" asChild><Link href="/prestations#digital">En savoir plus</Link></Button>
+            <Button size="sm" variant="outline">Devis digital</Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Séminaires & congrès */}
+      <Card className="shadow-sm rounded-2xl overflow-hidden">
+        <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/seminaire.jpg')" }} aria-hidden />
+        <CardContent className="p-5">
+          <h3 className="text-lg font-semibold">Séminaires & congrès</h3>
+          <p className="text-sm text-gray-600 mt-1">Ice-breaker, interludes scéniques, moments fédérateurs.</p>
+          <div className="mt-4 flex items-center gap-2">
+            <Button size="sm" asChild><Link href="/prestations#seminaires">En savoir plus</Link></Button>
+            <Button size="sm" variant="outline">Devis séminaire</Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Vidéos / Teaser */}
       <section id="videos" className="py-16 bg-white">
@@ -92,7 +152,7 @@ export default function HomePage() {
             <div>
               <h2 className="text-3xl font-bold mb-3">Vidéos</h2>
               <p className="text-gray-700 mb-4">
-                Découvrez le teaser et des extraits de prestations : close-up, mentalisme et scènes d’entreprise.
+                Découvrez la magie digitale - Une animation moderne et originale proposée par Martial magicien pour marquer votre événement
               </p>
               <div className="flex gap-3">
                 <Button asChild><Link href="/galerie-video">Voir le teaser</Link></Button>
@@ -101,7 +161,7 @@ export default function HomePage() {
             </div>
             <div className="aspect-video rounded-2xl bg-gray-200 overflow-hidden"> {/* Ajoute overflow-hidden pour clipper si besoin */}
               <iframe
-                src="https://www.youtube.com/embed/rY9_wkeJPuw?start=5"
+                src="https://www.youtube.com/embed/rY9_wkeJPuw?start=10"
                 title="Vidéo de présentation Martial Magie"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
