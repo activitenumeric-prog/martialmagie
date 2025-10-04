@@ -7,6 +7,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+// Ajoute cette ligne après les imports existants
+import GoogleReviews from "@/components/GoogleReviews";
 
 export default function HomePage() {
   return (
@@ -38,12 +40,20 @@ export default function HomePage() {
       {/* Bande preuves sociales */}
       <section className="border-y bg-white">
         <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
-          <div><div className="text-2xl font-bold">300+</div> Avis Google</div>
-          <div><div className="text-2xl font-bold">FR / EN / ES</div> Langues</div>
+          <div>
+            <div className="text-2xl font-bold"><GoogleReviews placeId="ChIJN1t_tDeu5kcRUlarG-kbA8M" /></div> 
+            <div><Link href="https://www.google.com/maps/place/Martial+Magicien+digital+Mentaliste" target="_blank" rel="noopener noreferrer" className="text-xs underline hover:text-gray-600">
+              Avis Google
+            </Link></div>
+          </div>
+          <div><div className="text-2xl font-bold">FR / EN</div> Langues</div>
           <div><div className="text-2xl font-bold">France & Intl.</div> Déplacements</div>
           <div><div className="text-2xl font-bold">Close-up & Scène</div> Polyvalence</div>
         </div>
       </section>
+
+      
+            
 
       {/* Prestations */}
       <section id="prestations" className="py-16 md:py-20 bg-gray-50">
@@ -122,12 +132,12 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div className="aspect-[4/5] rounded-2xl bg-gray-200" />
           <div>
-            <h2 className="text-3xl font-bold mb-3">Pourquoi choisir Théotim ?</h2>
+            <h2 className="text-3xl font-bold mb-3">Pourquoi choisir Martial ?</h2>
             <ul className="space-y-2 text-gray-700">
               <li>• Style moderne : magie visuelle + mentalisme + humour.</li>
               <li>• Forte interactivité et adaptation à tous les publics.</li>
               <li>• 300+ avis Google et références variées.</li>
-              <li>• Prestation possible en FR / EN / ES, en France et à l’international.</li>
+              <li>• Prestation possible en FR / EN, en France et à l’international.</li>
             </ul>
             <div className="mt-5 flex gap-3">
               <Button>Télécharger la plaquette</Button>
