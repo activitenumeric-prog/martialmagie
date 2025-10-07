@@ -172,7 +172,7 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   href={item.href}
                   className={cn(
                     "font-semibold hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-2",
-                    item.href !== "/#contact" && pathname === item.href && "text-[#ef010d] font-bold underline decoration-[#ef010d] decoration-2"
+                    item.href !== "/contact" && pathname === item.href && "text-[#ef010d] font-bold underline decoration-[#ef010d] decoration-2"
                   )}
                 >
                   {item.label}
