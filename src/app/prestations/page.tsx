@@ -7,6 +7,8 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { motion } from "framer-motion"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"; // ← Ajout
+import Link from "next/link";
+import { ArrowRight } from 'lucide-react';
 
 export default function ServicesPage() {
   const services = [
@@ -69,7 +71,7 @@ export default function ServicesPage() {
       id: "seminaires",
       title: "Séminaires & congrès",
       desc:
-        "Ice‑breakers, interludes scéniques et moments fédérateurs pour vos équipes.",
+        "Ice‑breakers, interludes scéniques et moments fédérateurs pour vos équipes. Idéal pour renforcer la cohésion et l’engagement.",
       bullets: [
         "Ouvertures / transitions de plénière",
         "Messages clés intégrés dans les effets",
@@ -86,7 +88,7 @@ export default function ServicesPage() {
       {/* Hero Prestations */}
       <section className="relative bg-gray-950 text-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
-          <motion.h1 initial={{opacity:0, y:8}} animate={{opacity:1, y:0}} transition={{duration:0.35}} className="text-4xl md:text-5xl font-extrabold tracking-tight">
+          <motion.h1 initial={{opacity:0, y:8}} animate={{opacity:1, y:0}} transition={{duration:0.35}} className="font-display text-4xl md:text-5xl font-extrabold tracking-tight">
             Prestations de magie & mentalisme
           </motion.h1>
           <p className="mt-3 max-w-2xl text-gray-200">
@@ -94,7 +96,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {services.map(s => (
-              <a key={s.id} href={`#${s.id}`} className="text-sm px-3 py-1.5 rounded-full bg-white text-gray-900 border border-white/20 hover:bg-gray-100">
+              <a key={s.id} href={`#${s.id}`} className="font-display text-sm px-3 py-1.5 rounded-full bg-white text-gray-900 border border-white/20 hover:bg-gray-100">
                 {s.title}
               </a>
             ))}
@@ -110,13 +112,13 @@ export default function ServicesPage() {
               <Card key={id} className="rounded-2xl overflow-hidden shadow-sm">
                 <div className="h-40 bg-gray-200" aria-hidden />
                 <CardContent className="p-5">
-                  <h3 className="text-lg font-semibold">{title}</h3>
+                  <h2 className="text-lg font-semibold">{title}</h2>
                   <p className="text-sm text-gray-600 mt-1">{desc}</p>
                   <div className="mt-4 flex items-center gap-2">
                     <Button size="sm" asChild>
                       <a href={`#${id}`}>Voir le détail</a>
                     </Button>
-                    <Button size="sm" variant="outline">Demander un devis</Button>
+                    <Button size="sm">Demander un devis</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -207,14 +209,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="py-16 bg-gray-950 text-gray-100 text-center" id="contact">
+      {/* Appel à l'action */}
+      <section className="relative py-16 bg-cover bg-center bg-no-repeat text-gray-100 text-center" style={{ backgroundImage: "url('/images/bleu-nuit.png')" }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Parlons de votre événement</h2>
-          <p className="mt-2 opacity-90">Indiquez la date, le lieu et le nombre d’invités : réponse sous 24 h.</p>
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <Button size="lg" className="bg-white text-gray-900">Demander un devis</Button>
-            <Button size="lg" variant="outline" className="border-gray-300">Vérifier la disponibilité</Button>
+          <h2 className="text-3xl font-bold mb-6 text-black">Prêt à créer de la magie ?</h2>
+          <p className="text-lg text-gray-800 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+            Contactez-moi pour discuter de votre événement et transformer l’ordinaire en extraordinaire.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link href="/contact">
+                Demander un devis <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg">
+              <Link href="/prestations">Découvrir les prestations</Link>
+            </Button>
           </div>
         </div>
       </section>
