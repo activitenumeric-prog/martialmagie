@@ -10,6 +10,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { motion } from "framer-motion";
 import { Search, ZoomIn, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 import * as React from "react";
+import Link from "next/link";
+import { ArrowRight } from 'lucide-react';
 
 export default function PhotoGalleryPage() {
   const categories = ["Tout","Close-Up","Mariages","Entreprises","Scène","Backstage","Portraits","Digital & Marketing","Séminaires"];
@@ -50,7 +52,7 @@ export default function PhotoGalleryPage() {
       {/* Hero Galerie */}
       <section className="relative bg-gray-950 text-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
-          <motion.h1 initial={{opacity:0, y:8}} animate={{opacity:1, y:0}} transition={{duration:0.35}} className="text-4xl md:text-5xl font-extrabold tracking-tight">
+          <motion.h1 initial={{opacity:0, y:8}} animate={{opacity:1, y:0}} transition={{duration:0.35}} className="font-display text-4xl md:text-5xl font-extrabold tracking-tight">
             Galerie photo
           </motion.h1>
           <p className="mt-3 max-w-2xl text-gray-200">Moments capturés en close-up, sur scène et lors d’événements privés & professionnels.</p>
@@ -99,7 +101,7 @@ export default function PhotoGalleryPage() {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <Button variant="outline">Charger plus de photos</Button>
+            <Button size="lg">Charger plus de photos</Button>
           </div>
         </div>
       </section>
@@ -122,14 +124,22 @@ export default function PhotoGalleryPage() {
         </DialogContent>
       </Dialog>
 
-      {/* CTA final */}
-      <section className="py-16 bg-gray-950 text-gray-100 text-center" id="contact">
+      {/* Appel à l'action */}
+      <section className="relative py-16 bg-cover bg-center bg-no-repeat text-gray-100 text-center" style={{ backgroundImage: "url('/images/bleu-nuit.png')" }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold">Besoin d’une sélection sur-mesure ?</h2>
-          <p className="mt-2 opacity-90">Dites-moi votre type d’événement et je vous envoie une galerie ciblée.</p>
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <Button size="lg" className="bg-white text-gray-900">Demander une sélection</Button>
-            <Button size="lg" variant="outline" className="border-gray-300">Me contacter</Button>
+          <h2 className="text-3xl font-bold mb-6 text-black">Prêt à créer de la magie ?</h2>
+          <p className="text-lg text-gray-800 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+            Contactez-moi pour discuter de votre événement et transformer l’ordinaire en extraordinaire.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link href="/contact">
+                Demander un devis <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg">
+              <Link href="/prestations">Découvrir les prestations</Link>
+            </Button>
           </div>
         </div>
       </section>

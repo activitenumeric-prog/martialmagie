@@ -1,9 +1,15 @@
 // src/app/layout.tsx
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"  // ← Built-in, pas d'install
+import { Cinzel /* ou Playfair_Display, Spectral_SC, Marcellus */ } from "next/font/google";
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["700","900"],
+  variable: "--font-cinzel",
+});
 
 export const metadata: Metadata = {
   title: { // Fallback titre (override par page)
@@ -41,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" className={cinzel.variable} suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>

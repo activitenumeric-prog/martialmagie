@@ -7,6 +7,9 @@ import Footer from "@/components/Footer"; // ← Ajout
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import { ArrowRight } from 'lucide-react';
+
 import { motion } from "framer-motion";
 import {
   Calendar,
@@ -113,7 +116,7 @@ export default function NewsPage() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight"
+            className="text-4xl md:text-5xl font-extrabold tracking-tight font-display"
           >
             Actualités
           </motion.h1>
@@ -175,7 +178,6 @@ export default function NewsPage() {
             <p className="mt-3 text-gray-700">{featured.excerpt}</p>
             <div className="mt-6 flex gap-3">
               <Button>Lire l&rsquo;article</Button>
-              <Button variant="outline">Voir toutes les actus</Button>
             </div>
           </div>
         </div>
@@ -203,12 +205,12 @@ export default function NewsPage() {
                         <Clock className="h-3.5 w-3.5" /> {p.read} min
                       </span>
                     </div>
-                    <h3 className="mt-2 text-lg font-semibold">{p.title}</h3>
+                    <h3 className="mt-2 text-lg font-semibold font-display">{p.title}</h3>
                     <p className="mt-1 text-sm text-gray-700 line-clamp-2">
                       {p.excerpt}
                     </p>
                     <div className="mt-4">
-                      <Button size="sm">Lire</Button>
+                      <Button size="sm">Lire l&rsquo;article</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -217,11 +219,11 @@ export default function NewsPage() {
 
             {/* Pagination (statique) */}
             <div className="mt-8 flex items-center justify-between">
-              <Button variant="outline" className="flex items-center gap-2">
+              <Button size="lg" className="flex items-center gap-2">
                 <ChevronLeft className="h-4 w-4" /> Précédent
               </Button>
               <div className="text-sm text-gray-600">Page 1 sur 5</div>
-              <Button variant="outline" className="flex items-center gap-2">
+              <Button size="lg" className="flex items-center gap-2">
                 Suivant <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
@@ -231,7 +233,7 @@ export default function NewsPage() {
           <aside className="space-y-6">
             <Card className="rounded-2xl shadow-sm">
               <CardContent className="p-5">
-                <h4 className="font-semibold">Inscription newsletter</h4>
+                <h4 className="font-semibold font-display">Inscription newsletter</h4>
                 <p className="text-sm text-gray-600 mt-1">
                   Recevez les nouvelles dates, vidéos et conseils.
                 </p>
@@ -244,7 +246,7 @@ export default function NewsPage() {
 
             <Card className="rounded-2xl shadow-sm">
               <CardContent className="p-5">
-                <h4 className="font-semibold">Catégories</h4>
+                <h4 className="font-semibold font-display">Catégories</h4>
                 <ul className="mt-3 space-y-2 text-sm">
                   {categories
                     .filter((c) => c !== "Tout")
@@ -263,7 +265,7 @@ export default function NewsPage() {
 
             <Card className="rounded-2xl shadow-sm">
               <CardContent className="p-5">
-                <h4 className="font-semibold">Articles récents</h4>
+                <h4 className="font-semibold font-display">Articles récents</h4>
                 <ul className="mt-3 space-y-3 text-sm">
                   {allPosts.slice(0, 3).map((p) => (
                     <li key={p.id} className="flex items-start gap-3">

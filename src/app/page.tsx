@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 // Ajoute cette ligne après les imports existants
 import GoogleReviews from "@/components/GoogleReviews";
 
+import { ArrowRight } from 'lucide-react';
 import Image from "next/image";
 import { Calendar, Clock} from "lucide-react";
 
@@ -320,21 +321,26 @@ export default function HomePage() {
   </div>
 </section>
 
-      {/* CTA finale */}
-<section id="contact" className="relative py-16 bg-cover bg-center bg-no-repeat text-gray-100 text-center" style={{ backgroundImage: "url('/images/bleu-nuit.png')" }}>
-  {/* Overlay semi-transparent pour lisibilité du texte */}
-  <div className="absolute inset-0 bg-black/50 z-0"></div>
-  <div className="relative z-10 max-w-4xl mx-auto px-4">
-    <h2 className="text-3xl md:text-4xl font-bold">Parlons de votre événement</h2>
-    <p className="mt-2 opacity-90">
-      Mariage, soirée d’entreprise, anniversaire, séminaire : je vous réponds sous 24h.
-    </p>
-    <div className="mt-6 flex items-center justify-center gap-3">
-      <Button size="sm">Demander un devis</Button>
-      <Button size="sm">M’appeler</Button>
-    </div>
-  </div>
-</section>
+    {/* Appel à l'action */}
+      <section className="relative py-16 bg-cover bg-center bg-no-repeat text-gray-100 text-center" style={{ backgroundImage: "url('/images/bleu-nuit.png')" }}>
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-black">Prêt à créer de la magie ?</h2>
+          <p className="text-lg text-gray-800 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+            Contactez-moi pour discuter de votre événement et transformer l’ordinaire en extraordinaire.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link href="/contact">
+                Demander un devis <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg">
+              <Link href="/prestations">Découvrir les prestations</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer centralisé */}
       <Footer />

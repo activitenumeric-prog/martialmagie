@@ -116,7 +116,7 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                 height={200}
                 className="h-10 w-auto md:h-12"
               />
-              <div className="text-xs md:text-sm text-center">
+              <div className="text-xs md:text-sm text-center font-display">
                 <p className={cn("font-bold mb-0.5", isDark ? "text-gray-100" : "text-gray-900")}>
                   MAGICIEN PROFESSIONNEL
                 </p>

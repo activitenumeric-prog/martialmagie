@@ -22,20 +22,20 @@ export default function BioPage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-              Martial — <span className="text-[#ef010d]">Magicien & Mentaliste</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight font-display">
+              Martial — <span className="text-[#ef010d] ">Magicien & Mentaliste</span>
             </h1>
             <p className="mt-4 text-lg text-gray-700">
               Close-up, mentalisme et magie digitale au service de vos événements : mariages,
               séminaires, soirées privées & d’entreprise.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <button className="inline-flex items-center rounded-lg bg-[#ef010d] px-5 py-3 text-white font-semibold hover:opacity-90">
+              <Button className="inline-flex items-center rounded-lg px-5 py-3 text-white font-semibold" size="lg">
                 Demander un devis
-              </button>
-              <button className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 font-semibold hover:bg-gray-50">
+              </Button>
+              <Button className="inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 font-semibold" size="lg">
                 Appeler : +33 6 07 70 92 19
-              </button>
+              </Button>
             </div>
           </div>
           <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-xl bg-gray-200 flex items-center justify-center">
@@ -47,7 +47,7 @@ export default function BioPage() {
       {/* EN DEUX MOTS */}
       <section className="py-10 md:py-14 border-t bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold">En deux mots</h2>
+          <h2 className="font-display text-2xl md:text-3xl font-bold">En deux mots</h2>
           <ul className="mt-6 grid md:grid-cols-2 gap-3 text-gray-800">
             <li>• Magicien professionnel, spécialiste du close-up et du mentalisme</li>
             <li>• Magie digitale interactive pour stands, lancements & cocktails</li>
@@ -94,12 +94,12 @@ export default function BioPage() {
               Mon credo : une magie élégante, moderne et chaleureuse — où la technique s’efface au profit du souvenir.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <button className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 font-semibold hover:bg-white">
+              <Button className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 font-semibold" size="lg">
                 Voir les prestations
-              </button>
-              <button className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 font-semibold hover:bg-white">
+              </Button>
+              <Button className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 font-semibold" size="lg">
                 Voir des vidéos
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -196,19 +196,19 @@ export default function BioPage() {
       </div>
       
       {/* Appel à l'action */}
-      <section className="py-20 text-center bg-gradient-to-t from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="relative py-16 bg-cover bg-center bg-no-repeat text-gray-100 text-center" style={{ backgroundImage: "url('/images/bleu-nuit.png')" }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl font-bold mb-6">Prêt à créer de la magie ?</h3>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-black">Prêt à créer de la magie ?</h2>
+          <p className="text-lg text-gray-800 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             Contactez-moi pour discuter de votre événement et transformer l’ordinaire en extraordinaire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#ef010d] hover:bg-[#d6000d]">
+            <Button asChild size="lg">
               <Link href="/contact">
                 Demander un devis <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild size="lg">
               <Link href="/prestations">Découvrir les prestations</Link>
             </Button>
           </div>

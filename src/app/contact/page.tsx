@@ -24,7 +24,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight"
+            className="text-4xl md:text-5xl font-extrabold tracking-tight font-display"
           >
             Contact & Devis
           </motion.h1>
@@ -54,7 +54,7 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card className="rounded-2xl shadow-sm">
               <CardContent className="p-6">
-                <h3 className="font-semibold">Coordonnées directes</h3>
+                <h3 className="font-semibold font-display">Coordonnées directes</h3>
                 <ul className="mt-3 space-y-2 text-sm">
                   <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +33 6 07 70 92 19</li>
                   <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> spectacle@martialmagie.com</li>
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
             <Card className="rounded-2xl shadow-sm">
               <CardContent className="p-6">
-                <h3 className="font-semibold">Infos utiles</h3>
+                <h3 className="font-semibold font-display">Infos utiles</h3>
                 <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 space-y-1">
                   <li>Réponse rapide et conseils sur-mesure</li>
                   <li>Prestations FR / EN </li>
@@ -206,9 +206,8 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-              <p className="mt-3 pt-12 text-[2rem] leading-tight text-gray-700" style={{ fontFamily: '"Trebuchet MS", script' }}>
-                Contactez-moi à l&rsquo;aide de ce formulaire ou par téléphone au<br />
-                <a href="tel:+33607709219" className="font-semibold text-red-600 hover:text-red-700" style={{ fontFamily: '"Trebuchet MS", script', fontSize: '2rem' }}>+33 (0)6 07 70 92 19</a>
+              <p className="mt-3 pt-12 text-[2rem] leading-tight text-gray-700 font-display text-center">
+                Contactez-moi <br/><a href="tel:+33607709219" className="font-semibold text-red-600 hover:text-red-700">+33 (0)6 07 70 92 19</a><br/>ou<br/>à l&rsquo;aide de ce formulaire.
               </p>
             </div>
           </div>
