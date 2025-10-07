@@ -200,7 +200,7 @@ export default function BioPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h3 className="text-3xl font-bold mb-6">Prêt à créer de la magie ?</h3>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            Contactez-moi pour discuter de votre événement et transformer l'ordinaire en extraordinaire.
+            Contactez-moi pour discuter de votre événement et transformer l’ordinaire en extraordinaire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-[#ef010d] hover:bg-[#d6000d]">
