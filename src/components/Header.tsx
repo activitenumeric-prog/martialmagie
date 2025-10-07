@@ -179,7 +179,7 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                 >
                   Prestations <ChevronDown className="h-4 w-4 opacity-70" />
                 </Link>
-                <div className="absolute left-0 mt-2 hidden group-hover:block bg-white text-gray-900 shadow-lg rounded-xl p-3 w-72 border border-gray-200">
+                <div className="absolute left-0 hidden group-hover:block bg-white text-gray-900 shadow-lg rounded-xl p-3 w-72 border border-gray-200">
                   <ul className="space-y-1 text-sm">
                     {prestationsChildren.map((s) => (
                       <li key={s.href}>

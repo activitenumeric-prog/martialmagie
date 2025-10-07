@@ -105,7 +105,7 @@ export default function BioPage() {
 
           <div className="md:col-span-5 space-y-4">
             <div className="rounded-xl border bg-white p-5 shadow-sm">
-              <h3 className="font-semibold">Prestations phares</h3>
+              <h3 className="font-semibold font-display">Prestations phares</h3>
               <ul className="mt-3 space-y-2 text-sm">
                 <li><span className="underline">Close-up</span> — circulation parmi vos invités, miracles à quelques centimètres.</li>
                 <li><span className="underline">Mentalisme</span> — influence, prédictions & expériences impossibles.</li>
@@ -113,7 +113,7 @@ export default function BioPage() {
               </ul>
             </div>
             <div className="rounded-xl border bg-white p-5 shadow-sm">
-              <h3 className="font-semibold">Contact direct</h3>
+              <h3 className="font-semibold font-display">Contact direct</h3>
               <p className="mt-2 text-sm text-gray-700">
                 Tél. : <span className="underline">+33 6 07 70 92 19</span><br />
                 Email : <span className="underline">spectacle@martialmagie.com</span>
@@ -130,7 +130,7 @@ export default function BioPage() {
             {["Débuts et apprentissage","Premières prestations publiques","Développement du style personnel","Ouverture aux événements pro"].map((t,i)=> (
               <Card key={t} className="rounded-2xl shadow-sm">
                 <CardContent className="p-6">
-                  <div className="text-sm text-gray-500">20{10+i}&ndash;20{11+i}</div>
+                  <div className="text-sm text-gray-800">20{10+i}&ndash;20{11+i}</div>
                   <h3 className="font-semibold mt-1">{t}</h3>
                   <p className="text-sm text-gray-700 mt-2">Texte descriptif court sur la période, les apprentissages et les scènes marquantes (placeholder).</p>
                 </CardContent>

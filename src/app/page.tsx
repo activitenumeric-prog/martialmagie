@@ -130,7 +130,7 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/close-up.jpg')" }} aria-hidden />
         <CardContent className="pl-5">
-          <h3 className="text-lg font-semibold">Magicien Close-Up</h3>
+          <h3 className="text-lg font-semibold font-display">Magicien Close-Up</h3>
           <p className="text-sm text-gray-600 mt-1">Animation mobile au plus près des invités, idéale cocktail & dîner.</p>
           <div className="mt-4 flex items-center gap-2">
             <Button size="sm"><Link href="/prestations#closeup">En savoir plus</Link></Button>
@@ -143,7 +143,7 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/magie-mariage-710x473.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
-          <h3 className="text-lg font-semibold">Magicien pour Mariage</h3>
+          <h3 className="text-lg font-semibold font-display">Magicien pour Mariage</h3>
           <p className="text-sm text-gray-600 mt-1">Vin d’honneur, repas, ouverture de bal : émerveillement garanti.</p>
           <div className="mt-4 flex items-center gap-2">
             <Button size="sm"><Link href="/prestations#mariage">En savoir plus</Link></Button>
@@ -156,7 +156,7 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/malle-enchantée-710x450.png')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
-          <h3 className="text-lg font-semibold">Arbre de Noël</h3>
+          <h3 className="text-lg font-semibold font-display">Arbre de Noël</h3>
           <p className="text-sm text-gray-600 mt-1">Prestation sur-mesure pour enfants, ados ou adultes.</p>
           <div className="mt-4 flex items-center gap-2">
             <Button size="sm"><Link href="/prestations#anniversaire">En savoir plus</Link></Button>
@@ -169,7 +169,7 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/digital.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
-          <h3 className="text-lg font-semibold">Magie numérique</h3>
+          <h3 className="text-lg font-semibold font-display">Magie numérique</h3>
           <p className="text-sm text-gray-600 mt-1">Démonstrations bluffantes, participation du public, humour.</p>
           <div className="mt-4 flex items-center gap-2">
             <Button size="sm"><Link href="/prestations#mentalisme">En savoir plus</Link></Button>
@@ -182,7 +182,7 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/mentalisme.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
-          <h3 className="text-lg font-semibold">Magie digitale & marketing</h3>
+          <h3 className="text-lg font-semibold font-display">Magie digitale & marketing</h3>
           <p className="text-sm text-gray-600 mt-1">Attraction de stand, product reveal, expériences connectées.</p>
           <div className="mt-4 flex items-center gap-2">
             <Button size="sm"><Link href="/prestations#digital">En savoir plus</Link></Button>
@@ -195,7 +195,7 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/seminaire.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
-          <h3 className="text-lg font-semibold">Séminaires & congrès</h3>
+          <h3 className="text-lg font-semibold font-display">Séminaires & congrès</h3>
           <p className="text-sm text-gray-600 mt-1">Ice-breaker, interludes scéniques, moments fédérateurs.</p>
           <div className="mt-4 flex items-center gap-2">
             <Button size="sm"><Link href="/prestations#seminaires">En savoir plus</Link></Button>
