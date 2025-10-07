@@ -60,7 +60,7 @@ export default function HomePage() {
       transition={{ duration: 0.4 }}
       className="text-6xl md:text-6xl font-extrabold tracking-tight text-white font-display"
     >
-      Martial Magie
+      <span className="text-[#ef010d]">M</span>artial <span className="text-[#ef010d]">M</span>agie
     </motion.h1>
     <p className="text-4xl font-extrabold tracking-tight text-white font-display">
       Magicien de Paris & Mentaliste Professionnel
