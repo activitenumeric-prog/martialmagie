@@ -1,24 +1,20 @@
 // src/components/Header.tsx
 "use client";
-
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Youtube } from "lucide-react";
-
 import SiteLogo from "@/components/Sitelogo";
 import { cn } from "@/lib/cn";
 import { Phone, Mail, MapPin, Calendar, Users, Send, Shield } from "lucide-react"
-
 type HeaderProps = {
   /** Apparence sur fond clair (default) ou sombre */
   variant?: "light" | "dark";
   /** Affiche la topbar contact (au-dessus du header) */
   showTopbar?: boolean;
 };
-
 const navItems = [
   { label: "Accueil", href: "/" },
   { label: "Biographie", href: "/biographie" },
@@ -28,7 +24,6 @@ const navItems = [
   { label: "Actualités", href: "/actualites" },
   { label: "Contact", href: "/contact" },
 ];
-
 const prestationsChildren = [
   { label: "Close-Up", href: "/prestations#closeup" },
   { label: "Mariages", href: "/prestations#mariages" },
@@ -37,13 +32,11 @@ const prestationsChildren = [
   { label: "Magie digitale & marketing", href: "/prestations#digital" },
   { label: "Séminaires & congrès", href: "/prestations#seminaires" },
 ];
-
 export default function Header({ variant = "light", showTopbar = true }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [openPrestations, setOpenPrestations] = React.useState(false);
   const isDark = variant === "dark";
-
   return (
     <>
       {/* Topbar — mobile */}
@@ -72,7 +65,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
           </div>
         </div>
       )}
-
             {/* Topbar — desktop */}
       {showTopbar && (
         <div
@@ -97,34 +89,70 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                  aria-label="Instagram" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
                 <Instagram className="h-4 w-4" aria-hidden="true" />
                 <span className="sr-only">Instagram</span>
-              </a>
+            </a>
             <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer"
                  aria-label="YouTube" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
                 <Youtube className="h-4 w-4" aria-hidden="true" />
                 <span className="sr-only">YouTube</span>
-              </a>
+            </a>
           </div>
         </div>
       )}
-
       <header
         className={cn(
-          "sticky top-0 z-50 border-b backdrop-blur",
+          "sticky top-0 z-50 border-b backdrop-blur pb-4",
           isDark ? "bg-black/80 border-white/10 text-gray-100" : "bg-white/90 border-gray-200 text-gray-900"
         )}
         style={{ paddingTop: "env(safe-area-inset-top)" }} // anti-encoche iOS
       >
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo 200x200 intrinsèque, affiché ~40–48px de haut */}
-            <SiteLogo
-              variant={isDark ? "dark" : "light"}
-              label="Martial Magie"
-              width={200}
-              height={200}
-              className="h-10 w-auto md:h-12"
-            />
-
+            {/* Logo et texte sous le logo */}
+            <div className="flex flex-col items-center gap-1">
+              <SiteLogo
+                variant={isDark ? "dark" : "light"}
+                label="Martial Magie"
+                width={200}
+                height={200}
+                className="h-10 w-auto md:h-12"
+              />
+              <div className="text-xs md:text-sm text-center">
+                <p className={cn("font-bold mb-0.5", isDark ? "text-gray-100" : "text-gray-900")}>
+                  MAGICIEN PROFESSIONNEL
+                </p>
+                <div className="flex items-center justify-center space-x-2">
+                  <Link 
+                    href="/prestations#closeup" 
+                    className={cn(
+                      "font-bold hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-1",
+                      isDark ? "text-gray-300" : "text-gray-700"
+                    )}
+                  >
+                    Close-up
+                  </Link>
+                  <span className={cn(isDark ? "text-gray-500" : "text-gray-500")}>-</span>
+                  <Link 
+                    href="/prestations#mentalisme" 
+                    className={cn(
+                      "font-bold hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-1",
+                      isDark ? "text-gray-300" : "text-gray-700"
+                    )}
+                  >
+                    Mentalisme
+                  </Link>
+                  <span className={cn(isDark ? "text-gray-500" : "text-gray-500")}>-</span>
+                  <Link 
+                    href="/prestations#digital" 
+                    className={cn(
+                      "font-bold hover:text-[#ef010d] hover:font-bold hover:underline hover:decoration-[#ef010d] hover:decoration-1",
+                      isDark ? "text-gray-300" : "text-gray-700"
+                    )}
+                  >
+                    Magie digitale
+                  </Link>
+                </div>
+              </div>
+            </div>
             {/* Nav desktop */}
             <nav className="hidden md:flex items-center gap-6 text-[15px]">
               {/* Accueil & Biographie */}
@@ -140,7 +168,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   {item.label}
                 </Link>
               ))}
-
               {/* Prestations (dropdown desktop) */}
               <div className="group relative">
                 <Link
@@ -164,7 +191,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   </ul>
                 </div>
               </div>
-
               {/* Reste des items */}
               {navItems.slice(2).map((item) => (
                 <Link
@@ -179,7 +205,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                 </Link>
               ))}
             </nav>
-
             {/* CTA + burger */}
             <div className="flex items-center gap-2">
               <Button className="hidden md:inline-flex">Demander un devis</Button>
@@ -193,7 +218,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
             </div>
           </div>
         </div>
-
         {/* Mobile menu */}
         {open && (
           <div
@@ -213,7 +237,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   {item.label}
                 </MobileLink>
               ))}
-
               {/* Prestations (accordion mobile) */}
               <button
                 className="w-full flex items-center justify-between py-2"
@@ -233,7 +256,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   ))}
                 </div>
               )}
-
               {navItems.slice(2).map((item) => (
                 <MobileLink
                   key={item.href}
@@ -244,7 +266,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
                   {item.label}
                 </MobileLink>
               ))}
-
               <div className="pt-3">
                 <Button className="w-full">Demander un devis</Button>
               </div>
@@ -255,7 +276,6 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
     </>
   );
 }
-
 function MobileLink({
   href,
   children,
