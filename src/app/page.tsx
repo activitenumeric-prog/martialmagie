@@ -58,11 +58,11 @@ export default function HomePage() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="text-6xl md:text-6xl font-extrabold tracking-tight text-white"
+      className="text-6xl md:text-6xl font-extrabold tracking-tight text-white font-display"
     >
       Martial Magie
     </motion.h1>
-    <p className="text-4xl font-extrabold tracking-tight text-white">
+    <p className="text-4xl font-extrabold tracking-tight text-white font-display">
       Magicien de Paris & Mentaliste Professionnel
     </p>
     <p className="max-w-2xl mx-auto mt-4 text-base md:text-lg opacity-90 text-gray-200">
