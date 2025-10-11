@@ -9,6 +9,8 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 import SiteLogo from "@/components/Sitelogo";
 import { cn } from "@/lib/cn";
 import { Phone, Mail, MapPin, Calendar, Users, Send, Shield } from "lucide-react"
+import Image from "next/image";
+
 type HeaderProps = {
   /** Apparence sur fond clair (default) ou sombre */
   variant?: "light" | "dark";
@@ -82,18 +84,49 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
           <div className="flex items-center gap-4 opacity-80">
             <a href="https://fr-fr.facebook.com/martial.bacquias" title="Suivez-moi sur Facebook" target="_blank" rel="noopener noreferrer"
                 aria-label="Facebook" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
-              <Facebook className="h-4 w-4" aria-hidden="true" />
+              <Image
+                src="/images/Facebook30x30.png"
+                alt="Facebook Martial Magie : Magie numérique, mentaliste et close-up"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={30}
+                height={30}
+              />
               <span className="sr-only">Facebook</span>
             </a>
             <a href="https://www.instagram.com/martialmagicien/" target="_blank" rel="noopener noreferrer"
                  aria-label="Instagram" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
-                <Instagram className="h-4 w-4" aria-hidden="true" />
+                <Image
+                  src="/images/Instagram30x30.png"
+                  alt="Instagram Martial Magie : Magie numérique, mentaliste et close-up"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={30}
+                  height={30}
+                />
                 <span className="sr-only">Instagram</span>
             </a>
             <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer"
                  aria-label="YouTube" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
-                <Youtube className="h-4 w-4" aria-hidden="true" />
-                <span className="sr-only">YouTube</span>
+              <Image
+                src="/images/Youtube39x30.png"
+                alt="Youtube Martial Magie : Magie numérique, mentaliste et close-up"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={30}
+                height={30}
+              />
+            </a>
+            <a href="https://www.youtube.com/channel/UCySayulh_mZ8aTGSCg74ahQ" target="_blank" rel="noopener noreferrer"
+                 aria-label="Linkedin" className="inline-flex items-center gap-1.5 font-semibold hover:text-[#ef010d] hover:font-bold hover:decoration-[#ef010d] hover:decoration-2">
+              <Image
+                src="/images/Linkedin30x30.png"
+                alt="Linkedin Martial Magie : Magie numérique, mentaliste et close-up"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={30}
+                height={30}
+              />
             </a>
           </div>
         </div>
@@ -207,7 +240,15 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
             </nav>
             {/* CTA + burger */}
             <div className="flex items-center gap-2">
-              <Button className="hidden md:inline-flex">Demander un devis</Button>
+              <Button
+  className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform"
+>
+  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+  <span className="relative z-10 font-semibold">✨ Demander un devis</span>
+</Button>
+
+
+              {/* Burger menu (mobile) */}
               <button
                 className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-300"
                 onClick={() => setOpen((v) => !v)}

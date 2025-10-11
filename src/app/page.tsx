@@ -60,17 +60,18 @@ export default function HomePage() {
       transition={{ duration: 0.4 }}
       className="text-6xl md:text-6xl font-extrabold tracking-tight text-white font-display"
     >
-      <span className="text-[#ef010d]">M</span>artial <span className="text-[#ef010d]">M</span>agie
+      Martial Magie
     </motion.h1>
     <p className="text-4xl font-extrabold tracking-tight text-white font-display">
-      Magicien de Paris & Mentaliste Professionnel
+      Magicien professionnel à Paris, France & Mentaliste Professionnel
     </p>
     <p className="max-w-2xl mx-auto mt-4 text-base md:text-lg opacity-90 text-gray-200">
       Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 400 avis clients vérifiés.
     </p>
     <div className="mt-8 flex items-center justify-center gap-3">
       <Button size="lg"><Link href="/galerie-video">Découvrir le teaser</Link></Button>
-      <Button size="lg">Consulter les avis</Button>
+      <Button size="lg"><Link href="https://www.google.com/maps/place/Martial+Magicien+digital+Mentaliste" target="_blank" rel="noopener noreferrer" className="text-xs underline hover:text-gray-600">
+              Consulter les avis</Link></Button>
     </div>
   </div>
 </section>
