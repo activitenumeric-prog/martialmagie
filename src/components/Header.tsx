@@ -240,14 +240,10 @@ export default function Header({ variant = "light", showTopbar = true }: HeaderP
             </nav>
             {/* CTA + burger */}
             <div className="flex items-center gap-2">
-              <Button
-  className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform"
->
-  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
-  <span className="relative z-10 font-semibold">✨ Demander un devis</span>
-</Button>
-
-
+              <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                <span className="relative z-10 font-semibold"><Link href="/contact">✨ Demander un devis</Link></span>
+              </Button>
               {/* Burger menu (mobile) */}
               <button
                 className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-300"

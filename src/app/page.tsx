@@ -69,9 +69,13 @@ export default function HomePage() {
       Magie moderne, visuelle et interactive pour mariages, entreprises et événements privés. + de 400 avis clients vérifiés.
     </p>
     <div className="mt-8 flex items-center justify-center gap-3">
-      <Button size="lg"><Link href="/galerie-video">Découvrir le teaser</Link></Button>
-      <Button size="lg"><Link href="https://www.google.com/maps/place/Martial+Magicien+digital+Mentaliste" target="_blank" rel="noopener noreferrer" className="text-xs underline hover:text-gray-600">
-              Consulter les avis</Link></Button>
+      <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+        <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-tr before:from-transparent before:via-white/30 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"></span>
+        <span className="relative z-10 font-semibold"><Link href="/galerie-video">Découvrir le teaser</Link></span>
+      </Button>
+      <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+        <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-tr before:from-transparent before:via-white/30 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"></span>
+        <span className="relative z-10 font-semibold"><Link href="https://www.google.com/maps/place/Martial+Magicien+digital+Mentaliste" target="_blank" rel="noopener noreferrer">Consulter les avis</Link></span></Button>
     </div>
   </div>
 </section>
@@ -132,10 +136,14 @@ export default function HomePage() {
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/close-up.jpg')" }} aria-hidden />
         <CardContent className="pl-5">
           <h3 className="text-lg font-semibold font-display">Magicien Close-Up</h3>
-          <p className="text-sm text-gray-600 mt-1">Animation mobile au plus près des invités, idéale cocktail & dîner.</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Button size="sm"><Link href="/prestations#closeup">En savoir plus</Link></Button>
-            <Button size="sm">Devis close-up</Button>
+          <p className="text-sm text-gray-600 mt-1">Lors d’un événement d’entreprise, le magicien propose une expérience unique de magie de proximité, appelée close-up.
+En passant de table en table ou de groupe en groupe, il crée des moments de surprise et de rires au plus près du public, pendant un cocktail ou un repas.
+Pour une ambiance plus scénique, la formule stand-up ou show sur scène met en avant une magie interactive, mêlant mentalismes, humour et illusions digitales.
+Un spectacle vivant, élégant et participatif, qui marque les esprits et renforce la convivialité de votre événement.</p>
+          <div className="mt-4 flex justify-end items-center gap-2">
+            <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                            <span className="relative z-10 font-semibold"><Link href="/prestations#closeup">En savoir plus</Link></span></Button>
           </div>
         </CardContent>
       </Card>
@@ -145,10 +153,14 @@ export default function HomePage() {
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/magie-mariage-710x473.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
           <h3 className="text-lg font-semibold font-display">Magicien pour Mariage</h3>
-          <p className="text-sm text-gray-600 mt-1">Vin d’honneur, repas, ouverture de bal : émerveillement garanti.</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Button size="sm"><Link href="/prestations#mariage">En savoir plus</Link></Button>
-            <Button size="sm">Devis mariage</Button>
+          <p className="text-sm text-gray-600 mt-1">Faire appel à un magicien pour votre mariage ou pour célébrer un anniversaire, c’est choisir une expérience à la fois unique et inoubliable.
+La magie s’invite parmi vos convives, apportant une touche d’originalité, d’élégance et de rires partagés.
+Chaque numéro devient un moment de complicité et d’émerveillement, créant une ambiance conviviale dont chacun se souviendra.
+Avec son programme varié, alliant illusion, mentalisme et humour, Martial, magicien mentaliste, saura captiver toutes les générations et rendre votre grand jour magique.</p>
+          <div className="mt-4 flex justify-end items-center gap-2">
+            <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                            <span className="relative z-10 font-semibold"><Link href="/prestations#mariage">En savoir plus</Link></span></Button>
           </div>
         </CardContent>
       </Card>
@@ -157,11 +169,15 @@ export default function HomePage() {
       <Card className="shadow-sm rounded-2xl overflow-hidden">
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/malle-enchantée-710x450.png')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
-          <h3 className="text-lg font-semibold font-display">Arbre de Noël</h3>
-          <p className="text-sm text-gray-600 mt-1">Prestation sur-mesure pour enfants, ados ou adultes.</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Button size="sm"><Link href="/prestations#anniversaire">En savoir plus</Link></Button>
-            <Button size="sm">Devis Arbre de Noël</Button>
+          <h3 className="text-lg font-semibold font-display">Magicien Jeune public</h3>
+          <p className="text-sm text-gray-600 mt-1">La magie pour jeune public est toujours un moment très attendu par les enfants, plein de rires, de surprises et d’émerveillement.
+Avec La Malle Enchantée, Martial propose un spectacle interactif où petits et grands deviennent les héros d’une aventure pleine de rebondissements.
+Ce voyage imaginaire, construit autour du thème des voyages et parsemé d’une touche d’écologie, mêle rires, découvertes et participation active du public.
+Un spectacle poétique et joyeux, qui invite les enfants à rêver, à s’amuser et à repartir avec des étoiles plein les yeux.</p>
+          <div className="mt-4 flex justify-end items-center gap-2">
+           <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                           <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                           <span className="relative z-10 font-semibold"><Link href="/prestations#anniversaire">En savoir plus</Link></span></Button>
           </div>
         </CardContent>
       </Card>
@@ -171,10 +187,16 @@ export default function HomePage() {
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/digital.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
           <h3 className="text-lg font-semibold font-display">Magie numérique</h3>
-          <p className="text-sm text-gray-600 mt-1">Démonstrations bluffantes, participation du public, humour.</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Button size="sm"><Link href="/prestations#mentalisme">En savoir plus</Link></Button>
-            <Button size="sm">Devis mentalisme</Button>
+          <p className="text-sm text-gray-600 mt-1">L’ère du numérique s’invite aujourd’hui dans tous les foyers comme dans les entreprises, transformant notre quotidien avec les écrans et les objets connectés.
+La <Link href="#" className="font-semibold text-gray-900 underline underline-offset-4 hover:text-[#ef010d] transition-colors duration-300 ease-out" 
+title="La magie digitale, une idée novatrice pour animer vos événements">
+magie digitale</Link> s’inscrit dans cette évolution, en mariant technologie et illusion pour créer des moments d’étonnement inédits.
+Grâce à une simple tablette, Martial fait apparaître des objets, fait voyager des images et joue avec les perceptions du public.
+Un spectacle moderne, élégant et interactif, où le virtuel devient réel et où la magie prend une toute nouvelle dimension (<span className="font-semibold">mentalisme</span>).</p>
+          <div className="mt-4 flex justify-end items-center gap-2">
+            <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                            <span className="relative z-10 font-semibold"><Link href="/prestations#mentalisme">En savoir plus</Link></span></Button>
           </div>
         </CardContent>
       </Card>
@@ -184,10 +206,14 @@ export default function HomePage() {
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/mentalisme.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
           <h3 className="text-lg font-semibold font-display">Magie digitale & marketing</h3>
-          <p className="text-sm text-gray-600 mt-1">Attraction de stand, product reveal, expériences connectées.</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Button size="sm"><Link href="/prestations#digital">En savoir plus</Link></Button>
-            <Button size="sm">Devis digital</Button>
+          <p className="text-sm text-gray-600 mt-1">Participer à un salon professionnel est avant tout l’occasion de se distinguer dans un environnement hautement concurrentiel et de capter l’attention des visiteurs.
+Pour séduire vos prospects et valoriser vos produits, rien de tel qu’une approche originale et mémorable.
+En intégrant la magie digitale à votre stand, vous créez un véritable point d’attraction, où curiosité et innovation se rencontrent.
+Martial, magicien digital, transforme vos démonstrations en expériences interactives et surprenantes, qui marquent durablement les esprits.</p>
+          <div className="mt-4 flex justify-end items-center gap-2">
+            <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                            <span className="relative z-10 font-semibold"><Link href="/prestations#digital">En savoir plus</Link></span></Button>
           </div>
         </CardContent>
       </Card>
@@ -197,10 +223,14 @@ export default function HomePage() {
         <div className="relative h-36 bg-cover bg-center" style={{ backgroundImage: "url('/images/seminaire.jpg')" }} aria-hidden />
         <CardContent className="pl-5 pb-5">
           <h3 className="text-lg font-semibold font-display">Séminaires & congrès</h3>
-          <p className="text-sm text-gray-600 mt-1">Ice-breaker, interludes scéniques, moments fédérateurs.</p>
-          <div className="mt-4 flex items-center gap-2">
-            <Button size="sm"><Link href="/prestations#seminaires">En savoir plus</Link></Button>
-            <Button size="sm">Devis séminaire</Button>
+          <p className="text-sm text-gray-600 mt-1">Le spectacle de magie sur scène est un excellent moyen d’apporter une touche de légèreté et d’émerveillement à votre congrès ou soirée d’entreprise.
+Entre deux interventions ou en clôture d’événement, ces intermèdes magiques captent l’attention du public et créent un véritable moment de respiration.
+Martial propose une formule stand-up souple et adaptable, qui s’ajuste à votre programme, de 10 minutes à 1 heure selon vos besoins.
+Un divertissement dynamique, interactif et percutant, idéal pour surprendre, faire rire et marquer durablement vos invités.<br/></p>
+          <div className="mt-4 flex justify-end items-center gap-2">
+            <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                            <span className="relative z-10 font-semibold"><Link href="/prestations#seminaires">En savoir plus</Link></span></Button>
           </div>
         </CardContent>
       </Card>
@@ -218,8 +248,12 @@ export default function HomePage() {
                 Découvrez la magie digitale - Une animation moderne et originale proposée par Martial magicien pour marquer votre événement
               </p>
               <div className="flex gap-3">
-                <Button size="sm"><Link href="/galerie-video">Voir le teaser</Link></Button>
-                <Button size="sm" asChild><Link href="/galerie-video">+ de vidéos</Link></Button>
+                <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                                <span className="relative z-10 font-semibold"><Link href="/galerie-video">Voir le teaser</Link></span></Button>
+                <Button className="relative isolate overflow-hidden bg-white text-gray-900 font-medium px-6 py-3 rounded-full border border-gray-300 shadow-md hover:text-white hover:scale-105 transition-all cursor-pointer will-change-transform">
+                                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-out"></span>
+                                <span className="relative z-10 font-semibold"><Link href="/galerie-video">+ de vidéos</Link></span></Button>
               </div>
             </div>
             <div className="aspect-video rounded-2xl bg-gray-200 overflow-hidden"> {/* Ajoute overflow-hidden pour clipper si besoin */}
