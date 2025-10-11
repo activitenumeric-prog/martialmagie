@@ -42,7 +42,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   /* 👇 Ajout : crée l’utilitaire Tailwind `font-display` */
-  --font-display: var(--font-cinzel), serif;
+  --font-display: var(--font-roboto), serif;
 }
 
 :root {
